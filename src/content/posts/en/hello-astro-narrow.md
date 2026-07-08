@@ -63,7 +63,7 @@ export const siteConfig = {
 
 ```ts
 export const siteConfig = {
-  nav: ['posts', { label: { 'en': 'GitHub', 'zh-cn': 'GitHub' }, href: 'https://github.com/', icon: 'simple-icons:github' }],
+  nav: ['posts', { label: { 'en': 'GitHub', 'pt': 'GitHub' }, href: 'https://github.com/', icon: 'simple-icons:github' }],
 }
 ```
 
@@ -88,7 +88,7 @@ export const contentTypes = {
   posts: {
     collection: 'posts',
     path: '/posts/',
-    label: { 'en': 'Posts', 'zh-cn': '文章' },
+    label: { 'en': 'Posts', 'pt': 'Publicações' },
     cardStyle: 'article',
     listLayout: 'stack',
     gridColumns: 1,
