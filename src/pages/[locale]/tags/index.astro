@@ -11,8 +11,8 @@ export function getStaticPaths() {
 }
 
 const locale = Astro.params.locale as Locale;
-const posts = await getLocalizedEntries('posts', locale);
-const terms = uniqueTerms(posts, 'tags');
+const thoughts = await getLocalizedEntries('thoughts', locale);
+const terms = uniqueTerms(thoughts, 'tags');
 const t = useTranslations(locale);
 ---
 

@@ -8,7 +8,7 @@ series: ['theme-guide']
 seriesOrder: 2
 ---
 
-Este post continua o guia do tema apresentando os recursos nativos de Markdown que o Astro Narrow traz de fábrica, sem nenhuma camada de compatibilidade com shortcodes do Hugo.
+Este thought continua o guia do tema apresentando os recursos nativos de Markdown que o Astro Narrow traz de fábrica, sem nenhuma camada de compatibilidade com shortcodes do Hugo.
 
 ## Alertas
 

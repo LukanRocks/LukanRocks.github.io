@@ -6,8 +6,8 @@ import { getLocalizedEntries, uniqueTerms } from '../../lib/content/entries';
 import { useTranslations } from '../../i18n/utils';
 
 const locale = 'en';
-const posts = await getLocalizedEntries('posts', locale);
-const terms = uniqueTerms(posts, 'tags');
+const thoughts = await getLocalizedEntries('thoughts', locale);
+const terms = uniqueTerms(thoughts, 'tags');
 const t = useTranslations(locale);
 ---
 

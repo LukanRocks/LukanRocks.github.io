@@ -17,7 +17,7 @@ Astro Narrow is an Astro-native version of the Narrow reading experience. It use
 
 ## Configure `site.ts`
 
-`src/config/site.ts` controls site identity, navigation, layout width, comments, analytics, gallery behavior, and post settings.
+`src/config/site.ts` controls site identity, navigation, layout width, comments, analytics, gallery behavior, and thought settings.
 
 | Option                             | Purpose                            |
 | ---------------------------------- | ---------------------------------- |
@@ -31,8 +31,8 @@ Astro Narrow is an Astro-native version of the Narrow reading experience. It use
 | `comments`                         | Giscus settings                    |
 | `analytics`                        | Umami settings                     |
 | `gallery`, `lightbox`              | Markdown image behavior            |
-| `post.relatedCount`                | Related post count                 |
-| `post.license`                     | License block                      |
+| `thought.relatedCount`                | Related thought count                 |
+| `thought.license`                     | License block                      |
 
 ::::tabs
 :::tab{title="Basic site"}
@@ -52,7 +52,7 @@ export const siteConfig = {
 
 ```ts
 export const siteConfig = {
-  nav: ['posts', 'projects', 'archives', 'tags'],
+  nav: ['thoughts', 'projects', 'archives', 'tags'],
   footerNav: ['archives', 'tags'],
 }
 ```
@@ -63,7 +63,7 @@ export const siteConfig = {
 
 ```ts
 export const siteConfig = {
-  nav: ['posts', { label: { 'en': 'GitHub', 'pt': 'GitHub' }, href: 'https://github.com/', icon: 'simple-icons:github' }],
+  nav: ['thoughts', { label: { 'en': 'GitHub', 'pt': 'GitHub' }, href: 'https://github.com/', icon: 'simple-icons:github' }],
 }
 ```
 
@@ -85,10 +85,10 @@ export const siteConfig = {
 
 ```ts title="src/config/content.ts"
 export const contentTypes = {
-  posts: {
-    collection: 'posts',
-    path: '/posts/',
-    label: { 'en': 'Posts', 'pt': 'Publicações' },
+  thoughts: {
+    collection: 'thoughts',
+    path: '/thoughts/',
+    label: { 'en': 'Thoughts', 'pt': 'Pensamentos' },
     cardStyle: 'article',
     listLayout: 'stack',
     gridColumns: 1,
@@ -98,7 +98,7 @@ export const contentTypes = {
 
 ## Frontmatter
 
-Posts use Astro content collection fields. Keep frontmatter small and predictable.
+Thoughts use Astro content collection fields. Keep frontmatter small and predictable.
 
 | Field                                    | Use                                  |
 | ---------------------------------------- | ------------------------------------ |

@@ -2,10 +2,10 @@ import { getLocalizedEntries } from '../lib/content/entries'
 import { renderRss } from '../lib/content/rss'
 
 export async function GET({ site, url }: { site?: URL; url: URL }) {
-  const posts = await getLocalizedEntries('posts', 'en')
+  const thoughts = await getLocalizedEntries('thoughts', 'en')
   const origin = site?.origin || url.origin
 
-  return new Response(renderRss(posts, origin, '/'), {
+  return new Response(renderRss(thoughts, origin, '/'), {
     headers: {
       'content-type': 'application/rss+xml; charset=utf-8',
     },

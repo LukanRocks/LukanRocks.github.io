@@ -6,7 +6,7 @@ import type { Locale } from '../../config/i18n';
 import { entryDate, formatDate, localizedEntryPath, type ContentType } from '../../lib/content/entries';
 
 interface Props {
-  entry: CollectionEntry<'posts'> | CollectionEntry<'projects'>;
+  entry: CollectionEntry<'thoughts'> | CollectionEntry<'projects'>;
   collection: keyof typeof contentTypes;
   locale: Locale;
   style?: EntryCardStyle;

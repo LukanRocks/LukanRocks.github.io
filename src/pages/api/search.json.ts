@@ -2,7 +2,7 @@ import { getCollection } from 'astro:content'
 import { entryLocale, localizedEntryPath, type ContentType } from '../../lib/content/entries'
 
 export async function GET() {
-  const collections: ContentType[] = ['posts', 'projects', 'pages']
+  const collections: ContentType[] = ['thoughts', 'projects', 'pages']
   const items = []
 
   for (const collection of collections) {

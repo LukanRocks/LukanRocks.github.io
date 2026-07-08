@@ -8,7 +8,7 @@ Built with [Astro](https://astro.build) on the [Astro Narrow](https://github.com
 
 - **Framework**: Astro static site — content collections, remark/rehype Markdown transforms (alerts, tabs, math, Mermaid, galleries), Expressive Code blocks, Tailwind CSS 4.
 - **Package manager**: pnpm (version pinned via `packageManager` in `package.json`).
-- **Content**: Markdown in `src/content/` — `posts`, `projects`, `pages` (about/timeline/resume), and `series`. Each English entry has a `pt/` sibling with the same filename for the language switcher to pair them.
+- **Content**: Markdown in `src/content/` — `thoughts` (the blog, published at `/thoughts/`), `projects`, `pages` (about/timeline/resume), and `series`. Each English entry has a `pt/` sibling with the same filename for the language switcher to pair them.
 
 ## Hosting & Domain
 
@@ -26,7 +26,7 @@ pnpm build    # static build into dist/
 
 ## Main Config Files
 
-- `src/config/site.ts`: site metadata, author profile, navigation, comments, analytics, gallery, post license.
+- `src/config/site.ts`: site metadata, author profile, navigation, comments, analytics, gallery, content license.
 - `src/config/content.ts`: content type labels, paths, card style, list layout, home sections.
 - `src/config/i18n.ts`: locales (`en`, `pt`) and localized paths.
 - `src/content.config.ts`: content collection schemas (the reference for available frontmatter).
@@ -35,4 +35,4 @@ pnpm build    # static build into dist/
 
 ## Writing
 
-Add a Markdown file under `src/content/posts/en/` with at least `title` and `pubDate` frontmatter; it appears automatically in the post list, homepage, archives, RSS, and search. Add the Portuguese version under `src/content/posts/pt/` with the same filename.
+Add a Markdown file under `src/content/thoughts/en/` with at least `title` and `pubDate` frontmatter; it appears automatically in the thoughts list, homepage, archives, RSS, and search. Add the Portuguese version under `src/content/thoughts/pt/` with the same filename.

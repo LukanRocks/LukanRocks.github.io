@@ -9,17 +9,17 @@ import { useTranslations } from '../../../i18n/utils';
 export async function getStaticPaths() {
   const paths = [];
   for (const locale of locales.filter((item) => item !== 'en')) {
-    const posts = await getLocalizedEntries('posts', locale);
-    paths.push(...uniqueTerms(posts, 'tags').map((term) => ({ params: { locale, tag: term.slug }, props: { locale, term, posts: posts.filter((entry) => entry.data.tags?.some((tag) => slugTerm(tag) === term.slug)) } })));
+    const thoughts = await getLocalizedEntries('thoughts', locale);
+    paths.push(...uniqueTerms(thoughts, 'tags').map((term) => ({ params: { locale, tag: term.slug }, props: { locale, term, thoughts: thoughts.filter((entry) => entry.data.tags?.some((tag) => slugTerm(tag) === term.slug)) } })));
   }
   return paths;
 }
 
-const { locale, term, posts } = Astro.props as any as { locale: Locale; term: any; posts: any[] };
+const { locale, term, thoughts } = Astro.props as any as { locale: Locale; term: any; thoughts: any[] };
 const t = useTranslations(locale);
 ---
 
 <BaseLayout title={`${t('taxonomy.tagPrefix')}：${term.name}`} locale={locale}>
   <PageHeader title={`${t('taxonomy.tagPrefix')}：${term.name}`} description={`${term.count} ${t('taxonomy.count')}`} locale={locale} />
-  <EntryList entries={posts} collection="posts" locale={locale} />
+  <EntryList entries={thoughts} collection="thoughts" locale={locale} />
 </BaseLayout>

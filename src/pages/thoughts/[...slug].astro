@@ -2,33 +2,33 @@
 import { render } from 'astro:content';
 import BaseLayout from '../../components/layout/BaseLayout.astro';
 import Breadcrumbs from '../../components/content/Breadcrumbs.astro';
-import PostMeta from '../../components/content/PostMeta.astro';
-import PostLicense from '../../components/content/PostLicense.astro';
-import PostNavigation from '../../components/content/PostNavigation.astro';
-import RelatedPosts from '../../components/content/RelatedPosts.astro';
+import ThoughtMeta from '../../components/content/ThoughtMeta.astro';
+import ThoughtLicense from '../../components/content/ThoughtLicense.astro';
+import ThoughtNavigation from '../../components/content/ThoughtNavigation.astro';
+import RelatedThoughts from '../../components/content/RelatedThoughts.astro';
 import { contentTypes } from '../../config/content';
 import { getLocalePath } from '../../config/i18n';
 import { siteConfig } from '../../config/site';
-import { adjacentEntries, getLocalizedEntries, entrySlug, relatedPosts, seriesPosts } from '../../lib/content/entries';
+import { adjacentEntries, getLocalizedEntries, entrySlug, relatedThoughts, seriesThoughts } from '../../lib/content/entries';
 
 export async function getStaticPaths() {
-  const posts = await getLocalizedEntries('posts', 'en');
-  return posts.map((entry) => ({ params: { slug: entrySlug(entry as any) }, props: { entry } }));
+  const thoughts = await getLocalizedEntries('thoughts', 'en');
+  return thoughts.map((entry) => ({ params: { slug: entrySlug(entry as any) }, props: { entry } }));
 }
 
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
-const posts = await getLocalizedEntries('posts', 'en');
-const adjacent = adjacentEntries<'posts'>(posts, entry);
-const related = relatedPosts(posts, entry, siteConfig.post.relatedCount);
+const thoughts = await getLocalizedEntries('thoughts', 'en');
+const adjacent = adjacentEntries<'thoughts'>(thoughts, entry);
+const related = relatedThoughts(thoughts, entry, siteConfig.thought.relatedCount);
 
 const seriesEntries = entry.data.series?.length ? await getLocalizedEntries('series', 'en') : [];
 const seriesGroups = (entry.data.series ?? [])
   .map((slug: string) => {
     const seriesEntry = seriesEntries.find((s) => entrySlug(s as any) === slug);
-    return seriesEntry ? { seriesEntry, posts: seriesPosts(posts, slug) } : undefined;
+    return seriesEntry ? { seriesEntry, thoughts: seriesThoughts(thoughts, slug) } : undefined;
   })
-  .filter((group): group is { seriesEntry: any; posts: any[] } => Boolean(group));
+  .filter((group): group is { seriesEntry: any; thoughts: any[] } => Boolean(group));
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description} locale="en" headings={headings} toc={entry.data.toc ?? 'center'} comments={entry.data.comments}>
@@ -36,7 +36,7 @@ const seriesGroups = (entry.data.series ?? [])
     locale="en"
     items={[
       { label: siteConfig.shortName, href: getLocalePath('en', '/'), icon: 'lucide:home' },
-      { label: contentTypes.posts.label.en, href: getLocalePath('en', contentTypes.posts.path), icon: contentTypes.posts.icon },
+      { label: contentTypes.thoughts.label.en, href: getLocalePath('en', contentTypes.thoughts.path), icon: contentTypes.thoughts.icon },
       { label: entry.data.title, icon: 'lucide:file-text' }
     ]}
   />
@@ -45,7 +45,7 @@ const seriesGroups = (entry.data.series ?? [])
       <img src={entry.data.cover} alt={entry.data.title} class="aspect-video max-h-[60vh] w-full object-cover" loading="eager" />
     </div>
   )}
-  <PostMeta
+  <ThoughtMeta
     title={entry.data.title}
     description={entry.data.description}
     date={entry.data.pubDate}
@@ -57,7 +57,7 @@ const seriesGroups = (entry.data.series ?? [])
   <article class="prose mb-12 max-w-none">
     <Content />
   </article>
-  <PostLicense locale="en" />
-  <PostNavigation previous={adjacent.previous} next={adjacent.next} locale="en" />
-  <RelatedPosts posts={related} locale="en" />
+  <ThoughtLicense locale="en" />
+  <ThoughtNavigation previous={adjacent.previous} next={adjacent.next} locale="en" />
+  <RelatedThoughts thoughts={related} locale="en" />
 </BaseLayout>

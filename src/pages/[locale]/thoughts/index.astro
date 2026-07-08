@@ -11,11 +11,11 @@ export function getStaticPaths() {
 }
 
 const locale = Astro.params.locale as Locale;
-const posts = await getLocalizedEntries('posts', locale);
+const thoughts = await getLocalizedEntries('thoughts', locale);
 const t = useTranslations(locale);
 ---
 
-<BaseLayout title={t('posts.title')} description={t('posts.description')} locale={locale}>
-  <PageHeader title={t('posts.title')} description={t('posts.description')} locale={locale} />
-  <EntryList entries={posts} collection="posts" locale={locale} />
+<BaseLayout title={t('thoughts.title')} description={t('thoughts.description')} locale={locale}>
+  <PageHeader title={t('thoughts.title')} description={t('thoughts.description')} locale={locale} />
+  <EntryList entries={thoughts} collection="thoughts" locale={locale} />
 </BaseLayout>

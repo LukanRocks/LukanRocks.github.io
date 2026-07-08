@@ -8,7 +8,7 @@ series: ['theme-guide']
 seriesOrder: 2
 ---
 
-This post continues the theme guide by walking through the Markdown-native features Astro Narrow ships with, without any Hugo shortcode compatibility layer.
+This thought continues the theme guide by walking through the Markdown-native features Astro Narrow ships with, without any Hugo shortcode compatibility layer.
 
 ## Alerts
 

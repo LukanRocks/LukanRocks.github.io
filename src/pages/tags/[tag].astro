@@ -6,15 +6,15 @@ import { getLocalizedEntries, slugTerm, uniqueTerms } from '../../lib/content/en
 import { useTranslations } from '../../i18n/utils';
 
 export async function getStaticPaths() {
-  const posts = await getLocalizedEntries('posts', 'en');
-  return uniqueTerms(posts, 'tags').map((term) => ({ params: { tag: term.slug }, props: { term, posts: posts.filter((entry) => entry.data.tags?.some((tag) => slugTerm(tag) === term.slug)) } }));
+  const thoughts = await getLocalizedEntries('thoughts', 'en');
+  return uniqueTerms(thoughts, 'tags').map((term) => ({ params: { tag: term.slug }, props: { term, thoughts: thoughts.filter((entry) => entry.data.tags?.some((tag) => slugTerm(tag) === term.slug)) } }));
 }
 
-const { term, posts } = Astro.props;
+const { term, thoughts } = Astro.props;
 const t = useTranslations('en');
 ---
 
 <BaseLayout title={`${t('taxonomy.tagPrefix')}: ${term.name}`} locale="en">
   <PageHeader title={`${t('taxonomy.tagPrefix')}: ${term.name}`} description={`${term.count} ${t('taxonomy.count')}`} locale="en" />
-  <EntryList entries={posts} collection="posts" locale="en" />
+  <EntryList entries={thoughts} collection="thoughts" locale="en" />
 </BaseLayout>

@@ -2,21 +2,21 @@
 import BaseLayout from '../../components/layout/BaseLayout.astro';
 import EntryList from '../../components/content/EntryList.astro';
 import PageHeader from '../../components/content/PageHeader.astro';
-import { getLocalizedEntries, seriesPosts, entrySlug } from '../../lib/content/entries';
+import { getLocalizedEntries, seriesThoughts, entrySlug } from '../../lib/content/entries';
 
 export async function getStaticPaths() {
   const series = await getLocalizedEntries('series', 'en');
-  const posts = await getLocalizedEntries('posts', 'en');
+  const thoughts = await getLocalizedEntries('thoughts', 'en');
   return series.map((entry) => ({
     params: { series: entrySlug(entry as any) },
-    props: { seriesEntry: entry, posts: seriesPosts(posts, entrySlug(entry as any)) }
+    props: { seriesEntry: entry, thoughts: seriesThoughts(thoughts, entrySlug(entry as any)) }
   }));
 }
 
-const { seriesEntry, posts } = Astro.props;
+const { seriesEntry, thoughts } = Astro.props;
 ---
 
 <BaseLayout title={seriesEntry.data.title} description={seriesEntry.data.description} locale="en">
   <PageHeader title={seriesEntry.data.title} description={seriesEntry.data.description} locale="en" />
-  <EntryList entries={posts} collection="posts" locale="en" />
+  <EntryList entries={thoughts} collection="thoughts" locale="en" />
 </BaseLayout>

@@ -6,13 +6,13 @@ function escapeXml(value: string) {
   return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;')
 }
 
-export function renderRss(posts: Array<CollectionEntry<'posts'>>, origin: string, basePath = '/') {
+export function renderRss(thoughts: Array<CollectionEntry<'thoughts'>>, origin: string, basePath = '/') {
   const siteUrl = origin.replace(/\/$/, '')
   const channelUrl = `${siteUrl}${basePath}`
 
-  const items = posts
+  const items = thoughts
     .map((entry) => {
-      const url = `${siteUrl}${localizedEntryPath('posts', entry as any)}`
+      const url = `${siteUrl}${localizedEntryPath('thoughts', entry as any)}`
       const date = entry.data.pubDate.toUTCString()
       return [
         '<item>',

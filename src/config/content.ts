@@ -1,6 +1,6 @@
 import type { Locale } from './i18n'
 
-export type ContentCollection = 'posts' | 'projects' | 'pages'
+export type ContentCollection = 'thoughts' | 'projects' | 'pages'
 export type EntryCardStyle = 'article' | 'showcase' | 'compact'
 export type EntryListLayout = 'stack' | 'grid'
 export type EntryGridColumns = 1 | 2 | 3
@@ -12,13 +12,13 @@ export type HomeSectionConfig = {
 }
 
 export const contentTypes = {
-  posts: {
-    collection: 'posts',
-    path: '/posts/',
+  thoughts: {
+    collection: 'thoughts',
+    path: '/thoughts/',
     icon: 'lucide:file-text',
     label: {
-      'en': 'Posts',
-      'pt': 'Publicações',
+      'en': 'Thoughts',
+      'pt': 'Pensamentos',
     },
     showMeta: true,
     cardStyle: 'article',
@@ -28,8 +28,8 @@ export const contentTypes = {
       enabled: true,
       limit: 5,
       title: {
-        'en': 'Recent Posts',
-        'pt': 'Publicações Recentes',
+        'en': 'Recent Thoughts',
+        'pt': 'Pensamentos Recentes',
       },
     },
   },

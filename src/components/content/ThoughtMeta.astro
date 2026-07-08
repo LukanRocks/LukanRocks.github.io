@@ -7,7 +7,7 @@ import SeriesNav from './SeriesNav.astro';
 
 interface SeriesGroup {
   seriesEntry: CollectionEntry<'series'>;
-  posts: CollectionEntry<'posts'>[];
+  thoughts: CollectionEntry<'thoughts'>[];
 }
 
 interface Props {
@@ -17,7 +17,7 @@ interface Props {
   locale: Locale;
   tags?: string[];
   seriesGroups?: SeriesGroup[];
-  current?: CollectionEntry<'posts'>;
+  current?: CollectionEntry<'thoughts'>;
 }
 
 const {

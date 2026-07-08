@@ -1,7 +1,8 @@
 import { getCollection, type CollectionEntry } from 'astro:content'
 import { getLocaleFromId, getLocalePath, stripLocaleFromId, type Locale } from '../../config/i18n'
+import { contentTypes } from '../../config/content'
 
-export type ContentType = 'posts' | 'projects' | 'pages' | 'series'
+export type ContentType = 'thoughts' | 'projects' | 'pages' | 'series'
 
 export function entryLocale(entry: CollectionEntry<ContentType>) {
   return entry.data.lang || getLocaleFromId(entry.id)
@@ -29,7 +30,8 @@ export async function getLocalizedEntries<T extends ContentType>(collection: T, 
 export function localizedEntryPath(collection: ContentType, entry: CollectionEntry<ContentType>) {
   const slug = entrySlug(entry)
   const locale = entryLocale(entry)
-  const base = collection === 'pages' ? '' : `/${collection}`
+  const typePath = (contentTypes as Record<string, { path?: string }>)[collection]?.path
+  const base = collection === 'pages' ? '' : (typePath ?? `/${collection}`)
   const path = `${base}/${slug}/`.replace(/\/+/g, '/')
   return getLocalePath(locale, path)
 }
@@ -43,7 +45,7 @@ export function formatDate(date: Date | undefined, locale: Locale) {
   }).format(date)
 }
 
-export function uniqueTerms(entries: Array<CollectionEntry<'posts'>>, field: 'tags') {
+export function uniqueTerms(entries: Array<CollectionEntry<'thoughts'>>, field: 'tags') {
   const terms = new Map<string, number>()
   for (const entry of entries) {
     for (const term of entry.data[field] || []) {
@@ -61,10 +63,10 @@ export function adjacentEntries<T extends ContentType>(entries: Array<Collection
   }
 }
 
-export function relatedPosts(posts: Array<CollectionEntry<'posts'>>, current: CollectionEntry<'posts'>, limit = 3) {
+export function relatedThoughts(thoughts: Array<CollectionEntry<'thoughts'>>, current: CollectionEntry<'thoughts'>, limit = 3) {
   const currentTerms = new Set(current.data.tags || [])
 
-  return posts
+  return thoughts
     .filter((entry) => entry.id !== current.id)
     .map((entry) => {
       const score = (entry.data.tags || []).filter((term) => currentTerms.has(term)).length
@@ -77,8 +79,8 @@ export function relatedPosts(posts: Array<CollectionEntry<'posts'>>, current: Co
     .map((item) => item.entry)
 }
 
-export function seriesPosts(posts: Array<CollectionEntry<'posts'>>, seriesSlug: string) {
-  return posts
+export function seriesThoughts(thoughts: Array<CollectionEntry<'thoughts'>>, seriesSlug: string) {
+  return thoughts
     .filter((entry) => entry.data.series?.includes(seriesSlug))
     .sort((a, b) => {
       const orderA = a.data.seriesOrder ?? Infinity

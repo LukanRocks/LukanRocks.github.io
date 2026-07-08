@@ -17,7 +17,7 @@ O Astro Narrow é uma versão nativa em Astro da experiência de leitura do Narr
 
 ## Configurar o `site.ts`
 
-O arquivo `src/config/site.ts` controla a identidade do site, navegação, largura do layout, comentários, analytics, comportamento da galeria e configurações de posts.
+O arquivo `src/config/site.ts` controla a identidade do site, navegação, largura do layout, comentários, analytics, comportamento da galeria e configurações de thoughts.
 
 | Opção                              | Propósito                                 |
 | ---------------------------------- | ----------------------------------------- |
@@ -31,8 +31,8 @@ O arquivo `src/config/site.ts` controla a identidade do site, navegação, largu
 | `comments`                         | Configurações do Giscus                   |
 | `analytics`                        | Configurações do Umami                    |
 | `gallery`, `lightbox`              | Comportamento de imagens no Markdown      |
-| `post.relatedCount`                | Quantidade de posts relacionados          |
-| `post.license`                     | Bloco de licença                          |
+| `thought.relatedCount`                | Quantidade de thoughts relacionados          |
+| `thought.license`                     | Bloco de licença                          |
 
 ::::tabs
 :::tab{title="Site básico"}
@@ -52,7 +52,7 @@ export const siteConfig = {
 
 ```ts
 export const siteConfig = {
-  nav: ['posts', 'projects', 'archives', 'tags'],
+  nav: ['thoughts', 'projects', 'archives', 'tags'],
   footerNav: ['archives', 'tags'],
 }
 ```
@@ -63,7 +63,7 @@ export const siteConfig = {
 
 ```ts
 export const siteConfig = {
-  nav: ['posts', { label: { 'en': 'GitHub', 'pt': 'GitHub' }, href: 'https://github.com/', icon: 'simple-icons:github' }],
+  nav: ['thoughts', { label: { 'en': 'GitHub', 'pt': 'GitHub' }, href: 'https://github.com/', icon: 'simple-icons:github' }],
 }
 ```
 
@@ -85,10 +85,10 @@ O arquivo `src/config/content.ts` define como cada tipo de conteúdo aparece na 
 
 ```ts title="src/config/content.ts"
 export const contentTypes = {
-  posts: {
-    collection: 'posts',
-    path: '/posts/',
-    label: { 'en': 'Posts', 'pt': 'Publicações' },
+  thoughts: {
+    collection: 'thoughts',
+    path: '/thoughts/',
+    label: { 'en': 'Thoughts', 'pt': 'Pensamentos' },
     cardStyle: 'article',
     listLayout: 'stack',
     gridColumns: 1,
@@ -98,7 +98,7 @@ export const contentTypes = {
 
 ## Frontmatter
 
-Os posts usam os campos das coleções de conteúdo do Astro. Mantenha o frontmatter pequeno e previsível.
+Os thoughts usam os campos das coleções de conteúdo do Astro. Mantenha o frontmatter pequeno e previsível.
 
 | Campo                                    | Uso                                  |
 | ---------------------------------------- | ------------------------------------ |

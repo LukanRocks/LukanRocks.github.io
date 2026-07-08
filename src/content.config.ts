@@ -19,8 +19,8 @@ const baseSchema = z.object({
   lightbox: z.boolean().optional(),
 })
 
-const posts = defineCollection({
-  loader: glob({ base: './src/content/posts', pattern: '**/*.{md,mdx}' }),
+const thoughts = defineCollection({
+  loader: glob({ base: './src/content/thoughts', pattern: '**/*.{md,mdx}' }),
   schema: baseSchema.extend({
     pubDate: z.coerce.date(),
     series: z.array(z.string()).optional(),
@@ -109,7 +109,7 @@ const series = defineCollection({
 })
 
 export const collections = {
-  posts,
+  thoughts,
   projects,
   pages,
   series,

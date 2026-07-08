@@ -29,7 +29,7 @@ export const siteConfig = {
       enabled: true,
     },
   },
-  nav: ['posts', 'projects', 'archives', 'tags'],
+  nav: ['thoughts', 'projects', 'archives', 'tags'],
   footerNav: ['archives', 'tags', 'series', 'resume'],
   comments: {
     enabled: false,
@@ -68,7 +68,7 @@ export const siteConfig = {
   lightbox: {
     enabled: true,
   },
-  post: {
+  thought: {
     relatedCount: 3,
     license: {
       enabled: true,
@@ -103,5 +103,5 @@ export const siteConfig = {
   analytics: Record<string, any>
   gallery: Record<string, any>
   lightbox: Record<string, any>
-  post: Record<string, any>
+  thought: Record<string, any>
 }

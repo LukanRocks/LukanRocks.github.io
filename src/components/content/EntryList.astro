@@ -5,7 +5,7 @@ import type { Locale } from '../../config/i18n';
 import EntryCard from './EntryCard.astro';
 
 interface Props {
-  entries: Array<CollectionEntry<'posts'> | CollectionEntry<'projects'>>;
+  entries: Array<CollectionEntry<'thoughts'> | CollectionEntry<'projects'>>;
   collection: ContentTypeId;
   locale: Locale;
 }
