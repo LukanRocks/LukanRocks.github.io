@@ -42,9 +42,7 @@ const faviconIco = `${assetBase.replace(/\/?$/, '/')}favicon.ico`;
 const themeInit = `
 (() => {
   const root = document.documentElement;
-  const theme = localStorage.getItem('theme') || 'default';
   const mode = localStorage.getItem('color-mode');
-  root.dataset.theme = theme;
   if (mode === 'dark' || (!mode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     root.classList.add('dark');
   }
@@ -53,7 +51,7 @@ const themeInit = `
 ---
 
 <!doctype html>
-<html lang={htmlLang} data-theme="default">
+<html lang={htmlLang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
