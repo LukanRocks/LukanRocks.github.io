@@ -16,13 +16,9 @@ import { rehypeAlerts } from './src/lib/markdown/rehype-alerts.mjs'
 import { rehypeImageGroups } from './src/lib/markdown/rehype-image-groups.mjs'
 import { rehypeMermaid } from './src/lib/markdown/rehype-mermaid.mjs'
 
-const site = process.env.ASTRO_SITE
-const base = process.env.ASTRO_BASE
-
 // https://astro.build/config
 export default defineConfig({
-  ...(site ? { site } : {}),
-  ...(base ? { base } : {}),
+  site: 'https://lukan.rocks',
   i18n: {
     locales: ['en', 'pt'],
     defaultLocale: 'en',

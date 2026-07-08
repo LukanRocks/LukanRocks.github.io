@@ -7,17 +7,17 @@ export const siteConfig = {
   author: {
     name: 'Astro Narrow',
     title: {
-      'en': 'A clean and minimal Astro theme',
-      'pt': 'Um tema Astro limpo e minimalista',
+      en: 'A clean and minimal Astro theme',
+      pt: 'Um tema Astro limpo e minimalista',
     },
     description: {
-      'en': 'Writing, projects, and notes — a compact space for ideas that keep their shape.',
-      'pt': 'Escrita, projetos e notas — um espaço compacto para ideias que mantêm sua forma.',
+      en: 'Writing, projects, and notes — a compact space for ideas that keep their shape.',
+      pt: 'Escrita, projetos e notas — um espaço compacto para ideias que mantêm sua forma.',
     },
     avatar: '/favicon.svg',
     social: [
-      { name: 'GitHub', url: 'https://github.com/', icon: 'simple-icons:github' },
-      { name: 'Email', url: 'mailto:hello@example.com', icon: 'lucide:mail' },
+      { name: 'GitHub', url: 'https://github.com/LukanRocks', icon: 'simple-icons:github' },
+      { name: 'Email', url: 'mailto:hello@lukan.rocks', icon: 'lucide:mail' },
     ],
   },
   contentWidth: '56rem',
