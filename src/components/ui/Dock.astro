@@ -10,7 +10,6 @@ interface Props {
 const { locale } = Astro.props;
 const t = useTranslations(locale);
 const labels = {
-  back: t('dock.back'),
   home: t('dock.home'),
   language: t('nav.language'),
   search: t('nav.search'),
@@ -22,10 +21,6 @@ const currentPath = Astro.url.pathname;
 ---
 
 <div class="dock-shell fixed bottom-4 left-1/2 z-40 flex -translate-x-1/2 items-center gap-1 border p-1 shadow-[var(--surface-shadow-strong)]" data-reading-progress>
-  <button type="button" data-history-back data-fallback={homeHref} class="dock-control grid h-10 w-10 place-items-center rounded-xl text-muted-foreground transition hover:bg-accent hover:text-accent-foreground" aria-label={labels.back} title={labels.back}>
-    <Icon name="lucide:arrow-left" class="h-4 w-4" />
-  </button>
-
   <button type="button" data-search-open class="dock-control grid h-10 w-10 place-items-center rounded-xl text-muted-foreground transition hover:bg-accent hover:text-accent-foreground" aria-label={labels.search} title={labels.search}>
     <Icon name="lucide:search" class="h-4 w-4" />
   </button>

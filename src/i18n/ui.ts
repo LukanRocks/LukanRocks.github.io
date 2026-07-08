@@ -11,7 +11,6 @@ export const ui = {
   'en': {
     'archive.description': 'All posts ordered by publication date.',
     'archive.title': 'Archives',
-    'dock.back': 'Back',
     'dock.home': 'Home',
     'dock.top': 'Back to top',
     'home.featuredProjects': 'Featured Projects',
@@ -53,7 +52,6 @@ export const ui = {
   'zh-cn': {
     'archive.description': '按发布日期排列的全部文章。',
     'archive.title': '归档',
-    'dock.back': '返回上一页',
     'dock.home': '首页',
     'dock.top': '返回顶部',
     'home.featuredProjects': '精选项目',
