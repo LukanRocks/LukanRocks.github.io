@@ -1,62 +1,76 @@
-import { getLocalePath, type Locale } from './i18n';
-import { contentTypes } from './content';
-import { siteConfig } from './site';
+import { getLocalePath, type Locale } from './i18n'
+import { contentTypes } from './content'
+import { siteConfig } from './site'
 
-export type NavigationConfigItem = string | {
-  label: Record<Locale, string>;
-  href: string;
-  icon: string;
-};
+export type NavigationConfigItem =
+  | string
+  | {
+      label: Record<Locale, string>
+      href: string
+      icon: string
+    }
 
 const systemRoutes = {
   archives: {
-    label: { en: 'Archives', 'zh-cn': '归档' },
+    label: { 'en': 'Archives', 'zh-cn': '归档' },
     href: '/archives/',
-    icon: 'lucide:archive'
+    icon: 'lucide:archive',
   },
   tags: {
-    label: { en: 'Tags', 'zh-cn': '标签' },
+    label: { 'en': 'Tags', 'zh-cn': '标签' },
     href: '/tags/',
-    icon: 'lucide:tags'
+    icon: 'lucide:tags',
   },
   series: {
-    label: { en: 'Series', 'zh-cn': '系列' },
+    label: { 'en': 'Series', 'zh-cn': '系列' },
     href: '/series/',
-    icon: 'lucide:bookmark'
+    icon: 'lucide:bookmark',
+  },
   resume: {
-    label: { en: 'Resume', 'zh-cn': '简历' },
+    label: { 'en': 'Resume', 'zh-cn': '简历' },
     href: '/resume/',
-    icon: 'lucide:file-text'
+    icon: 'lucide:file-text',
+  },
+} satisfies Record<
+  string,
+  {
+    label: Record<Locale, string>
+    href: string
+    icon: string
   }
-} satisfies Record<string, {
-  label: Record<Locale, string>;
-  href: string;
-  icon: string;
-}>;
+>
 
 const routeRegistry = {
-  ...Object.fromEntries(Object.entries(contentTypes).map(([id, config]) => [id, {
-    label: config.label,
-    href: config.path,
-    icon: config.icon
-  }])),
-  ...systemRoutes
-} as Record<string, {
-  label: Record<Locale, string>;
-  href: string;
-  icon: string;
-}>;
+  ...Object.fromEntries(
+    Object.entries(contentTypes).map(([id, config]) => [
+      id,
+      {
+        label: config.label,
+        href: config.path,
+        icon: config.icon,
+      },
+    ]),
+  ),
+  ...systemRoutes,
+} as Record<
+  string,
+  {
+    label: Record<Locale, string>
+    href: string
+    icon: string
+  }
+>
 
 function resolveNavigationItem(item: NavigationConfigItem) {
-  if (typeof item !== 'string') return item;
-  return routeRegistry[item];
+  if (typeof item !== 'string') return item
+  return routeRegistry[item]
 }
 
 function resolveHref(locale: Locale, href: string) {
   if (/^(https?:)?\/\//.test(href) || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#')) {
-    return href;
+    return href
   }
-  return getLocalePath(locale, href);
+  return getLocalePath(locale, href)
 }
 
 export function getNavigation(locale: Locale, items: NavigationConfigItem[] = siteConfig.nav) {
@@ -66,10 +80,10 @@ export function getNavigation(locale: Locale, items: NavigationConfigItem[] = si
     .map((item) => ({
       href: resolveHref(locale, item.href),
       label: item.label[locale],
-      icon: item.icon
-    }));
+      icon: item.icon,
+    }))
 }
 
 export function getFooterNavigation(locale: Locale) {
-  return getNavigation(locale, siteConfig.footerNav);
+  return getNavigation(locale, siteConfig.footerNav)
 }
