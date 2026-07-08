@@ -12,22 +12,22 @@ export type NavigationConfigItem =
 
 const systemRoutes = {
   archives: {
-    label: { 'en': 'Archives', 'zh-cn': '归档' },
+    label: { en: 'Archives', pt: 'Arquivo' },
     href: '/archives/',
     icon: 'lucide:archive',
   },
   tags: {
-    label: { 'en': 'Tags', 'zh-cn': '标签' },
+    label: { en: 'Tags', pt: 'Tags' },
     href: '/tags/',
     icon: 'lucide:tags',
   },
   series: {
-    label: { 'en': 'Series', 'zh-cn': '系列' },
+    label: { en: 'Series', pt: 'Séries' },
     href: '/series/',
     icon: 'lucide:bookmark',
   },
   resume: {
-    label: { 'en': 'Resume', 'zh-cn': '简历' },
+    label: { en: 'Resume', pt: 'Currículo' },
     href: '/resume/',
     icon: 'lucide:file-text',
   },
@@ -63,13 +63,13 @@ const routeRegistry = {
 
 function resolveNavigationItem(item: NavigationConfigItem) {
   if (typeof item !== 'string') return item
+
   return routeRegistry[item]
 }
 
 function resolveHref(locale: Locale, href: string) {
-  if (/^(https?:)?\/\//.test(href) || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#')) {
-    return href
-  }
+  if (/^(https?:)?\/\//.test(href) || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#')) return href
+
   return getLocalePath(locale, href)
 }
 

@@ -8,11 +8,11 @@ export const siteConfig = {
     name: 'Astro Narrow',
     title: {
       'en': 'A clean and minimal Astro theme',
-      'zh-cn': '一个干净克制的 Astro 主题',
+      'pt': 'Um tema Astro limpo e minimalista',
     },
     description: {
       'en': 'Writing, projects, and notes — a compact space for ideas that keep their shape.',
-      'zh-cn': '写作、项目与笔记 —— 一个保持克制、注重结构感的内容空间。',
+      'pt': 'Escrita, projetos e notas — um espaço compacto para ideias que mantêm sua forma.',
     },
     avatar: '/favicon.svg',
     social: [
