@@ -1,20 +1,20 @@
 import type { Locale } from './i18n'
 
 export const siteConfig = {
-  name: 'Astro Narrow',
-  shortName: 'Astro Narrow',
+  name: 'Lukan Vanderlinde',
+  shortName: 'Lukan Vanderlinde',
   description: 'A content-focused Astro theme inspired by Hugo Narrow.',
   author: {
-    name: 'Astro Narrow',
+    name: 'Lukan Vanderlinde 🇧🇷',
     title: {
-      en: 'A clean and minimal Astro theme',
-      pt: 'Um tema Astro limpo e minimalista',
+      en: 'Currently building my own things · VTEX (IPO) · TermSheet (acquired)',
+      pt: 'Atualmente fazendo meus projetos · VTEX (IPO) · TermSheet (acquired)',
     },
     description: {
-      en: 'Writing, projects, and notes — a compact space for ideas that keep their shape.',
-      pt: 'Escrita, projetos e notas — um espaço compacto para ideias que mantêm sua forma.',
+      en: "I've spent most of my career in product, leading teams, shaping roadmaps, and learning the hard way what makes software actually useful.",
+      pt: 'Passei a maior parte da minha carreira liderando produtos, times, moldando roadmaps e aprendendo na prática o que realmente torna um software útil.',
     },
-    avatar: '/favicon.svg',
+    avatar: '/profile.png',
     social: [
       { name: 'GitHub', url: 'https://github.com/LukanRocks', icon: 'simple-icons:github' },
       { name: 'Email', url: 'mailto:hello@lukan.rocks', icon: 'lucide:mail' },

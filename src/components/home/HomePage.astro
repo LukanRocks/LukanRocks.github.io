@@ -5,7 +5,6 @@ import type { Locale } from '../../config/i18n';
 import type { ContentTypeId } from '../../config/content';
 import { siteConfig } from '../../config/site';
 import EntryList from '../content/EntryList.astro';
-import ViewAll from '../ui/ViewAll.astro';
 
 interface HomeSection {
   id: ContentTypeId;
@@ -32,7 +31,7 @@ const avatarSrc = assetPath(author.avatar);
 ---
 
 <section class="py-8 sm:py-10">
-  <div class="profile-card surface-card px-7 py-5 sm:px-8 sm:py-6">
+  <div class="profile-card px-7 py-5 sm:px-8 sm:py-6">
     <div class="flex flex-col items-center gap-6 text-center md:flex-row md:items-start md:text-left">
       <img
         src={avatarSrc}
@@ -69,10 +68,10 @@ const avatarSrc = assetPath(author.avatar);
 {sections.map((section) => (
   section.entries.length > 0 && (
     <section class="py-8">
-      <div class="mb-3 flex items-end justify-between gap-4">
-        <h2 class="text-2xl font-semibold">{section.title}</h2>
-        <ViewAll href={section.href} locale={locale} />
-      </div>
+      <a href={section.href} class="group mb-3 inline-flex items-center gap-1.5">
+        <h2 class="text-lg font-semibold transition-colors duration-200 group-hover:text-primary">{section.title}</h2>
+        <Icon name="lucide:chevron-right" class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-primary" />
+      </a>
       <EntryList entries={section.entries} collection={section.id} locale={locale} />
     </section>
   )

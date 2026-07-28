@@ -17,8 +17,8 @@ export const contentTypes = {
     path: '/thoughts/',
     icon: 'lucide:file-text',
     label: {
-      'en': 'Thoughts',
-      'pt': 'Pensamentos',
+      en: 'Thoughts',
+      pt: 'Pensamentos',
     },
     showMeta: true,
     cardStyle: 'article',
@@ -28,8 +28,8 @@ export const contentTypes = {
       enabled: true,
       limit: 5,
       title: {
-        'en': 'Recent Thoughts',
-        'pt': 'Pensamentos Recentes',
+        en: 'Thoughts',
+        pt: 'Pensamentos',
       },
     },
   },
@@ -38,8 +38,8 @@ export const contentTypes = {
     path: '/projects/',
     icon: 'lucide:layers',
     label: {
-      'en': 'Projects',
-      'pt': 'Projetos',
+      en: 'Projects',
+      pt: 'Projetos',
     },
     showMeta: true,
     cardStyle: 'showcase',
@@ -50,8 +50,8 @@ export const contentTypes = {
       limit: 3,
       featuredOnly: true,
       title: {
-        'en': 'Featured Projects',
-        'pt': 'Projetos em Destaque',
+        en: 'Projects',
+        pt: 'Projetos',
       },
     },
   },
