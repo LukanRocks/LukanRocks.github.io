@@ -29,7 +29,7 @@ export const siteConfig = {
       enabled: true,
     },
   },
-  nav: ['thoughts', 'projects', 'archives', 'tags'],
+  nav: ['thoughts', 'projects', 'archives', 'tags', 'macSetup'],
   footerNav: ['archives', 'tags', 'series', 'resume'],
   comments: {
     enabled: false,

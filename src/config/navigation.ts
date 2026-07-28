@@ -31,6 +31,11 @@ const systemRoutes = {
     href: '/resume/',
     icon: 'lucide:file-text',
   },
+  macSetup: {
+    label: { en: 'Mac Setup', pt: 'Configuração do Mac' },
+    href: '/mac-setup/',
+    icon: 'lucide:command',
+  },
 } satisfies Record<
   string,
   {
