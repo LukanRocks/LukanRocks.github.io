@@ -24,17 +24,19 @@ export const siteConfig = {
       { name: 'GitHub', url: 'https://github.com/LukanRocks', icon: 'simple-icons:github' },
     ],
   },
-  contentWidth: '56rem',
   ui: {
+    contentWidth: '56rem',
     navbar: {
       sticky: true,
+      items: ['about', 'thoughts', 'projects', 'stack'],
+    },
+    footer: {
+      items: ['archives', 'tags', 'series'],
     },
     dock: {
       enabled: true,
     },
   },
-  nav: ['about', 'thoughts', 'projects', 'stack'],
-  footerNav: ['archives', 'tags', 'series'],
   gallery: {
     enabled: true,
     defaultLayout: 'justified',
@@ -68,17 +70,19 @@ export const siteConfig = {
     avatar: string
     social: Array<{ name: string; url: string; icon: string }>
   }
-  contentWidth: string
   ui: {
+    contentWidth: string
     navbar: {
       sticky: boolean
+      items: Array<string | { label: Record<Locale, string>; href: string; icon: string }>
+    }
+    footer: {
+      items: Array<string | { label: Record<Locale, string>; href: string; icon: string }>
     }
     dock: {
       enabled: boolean
     }
   }
-  nav: Array<string | { label: Record<Locale, string>; href: string; icon: string }>
-  footerNav: Array<string | { label: Record<Locale, string>; href: string; icon: string }>
   gallery: Record<string, any>
   lightbox: Record<string, any>
   thought: Record<string, any>

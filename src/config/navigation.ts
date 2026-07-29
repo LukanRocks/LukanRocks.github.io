@@ -78,7 +78,7 @@ function resolveHref(locale: Locale, href: string) {
   return getLocalePath(locale, href)
 }
 
-export function getNavigation(locale: Locale, items: NavigationConfigItem[] = siteConfig.nav) {
+export function getNavigation(locale: Locale, items: NavigationConfigItem[] = siteConfig.ui.navbar.items) {
   return items
     .map(resolveNavigationItem)
     .filter((item): item is NonNullable<typeof item> => Boolean(item))
@@ -90,5 +90,5 @@ export function getNavigation(locale: Locale, items: NavigationConfigItem[] = si
 }
 
 export function getFooterNavigation(locale: Locale) {
-  return getNavigation(locale, siteConfig.footerNav)
+  return getNavigation(locale, siteConfig.ui.footer.items)
 }
