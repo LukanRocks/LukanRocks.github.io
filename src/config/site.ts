@@ -9,7 +9,7 @@ export const siteConfig = {
     },
   },
   author: {
-    name: 'Lukan Vanderlinde 🇧🇷',
+    name: 'Lukan',
     title: {
       en: 'Currently building my own things · TermSheet (acquired) · VTEX (IPO)',
       pt: 'Atualmente fazendo meus projetos · TermSheet (acquired) · VTEX (IPO)',
@@ -22,7 +22,6 @@ export const siteConfig = {
     social: [
       { name: 'LinkedIn', url: 'https://www.linkedin.com/in/lukanvanderlinde/', icon: 'simple-icons:linkedin' },
       { name: 'GitHub', url: 'https://github.com/LukanRocks', icon: 'simple-icons:github' },
-      { name: 'Email', url: 'mailto:hello@lukan.rocks', icon: 'lucide:mail' },
     ],
   },
   contentWidth: '56rem',

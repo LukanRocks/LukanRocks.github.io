@@ -1,19 +1,20 @@
 import type { Locale } from '../config/i18n'
 
 export const languages: Record<Locale, string> = {
-  'en': 'English',
-  'pt': 'Português',
+  en: 'English',
+  pt: 'Português',
 }
 
 export const defaultLang: Locale = 'en'
 
 export const ui = {
-  'en': {
+  en: {
     'archive.description': 'All thoughts ordered by publication date.',
     'archive.title': 'Archives',
     'dock.home': 'Home',
     'dock.top': 'Back to top',
     'home.featuredProjects': 'Featured Projects',
+    'home.greeting': "Hey, I'm {name}!",
     'home.recentThoughts': 'Recent Thoughts',
     'license.label': 'License',
     'nav.colorMode': 'Toggle color mode',
@@ -48,12 +49,13 @@ export const ui = {
     'search.noResults': 'No results found',
     'search.placeholder': 'Search content',
   },
-  'pt': {
+  pt: {
     'archive.description': 'Todos os pensamentos ordenados por data de publicação.',
     'archive.title': 'Arquivo',
     'dock.home': 'Início',
     'dock.top': 'Voltar ao topo',
     'home.featuredProjects': 'Projetos em Destaque',
+    'home.greeting': 'Olá, me chamo {name}!',
     'home.recentThoughts': 'Pensamentos Recentes',
     'license.label': 'Licença',
     'nav.colorMode': 'Alternar modo de cor',
