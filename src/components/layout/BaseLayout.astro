@@ -23,14 +23,14 @@ interface Props {
 }
 
 const {
-  title = siteConfig.name,
-  description = siteConfig.description,
+  title = siteConfig.meta.name,
+  description = siteConfig.meta.description,
   locale = 'en',
   headings = [],
   toc = false
 } = Astro.props;
 
-const pageTitle = title === siteConfig.name ? title : `${title} | ${siteConfig.name}`;
+const pageTitle = title === siteConfig.meta.name ? title : `${title} | ${siteConfig.meta.name}`;
 const htmlLang = localeMeta[locale].htmlLang;
 const assetBase = import.meta.env.BASE_URL || '/';
 const faviconSvg = `${assetBase.replace(/\/?$/, '/')}favicon.svg`;

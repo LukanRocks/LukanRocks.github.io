@@ -1,9 +1,10 @@
 import type { Locale } from './i18n'
 
 export const siteConfig = {
-  name: 'Lukan Vanderlinde',
-  shortName: 'Lukan Vanderlinde',
-  description: 'Lukan is a product leader living in Curitiba - Brazil, currently trying his own projects.',
+  meta: {
+    name: 'Lukan Vanderlinde',
+    description: 'Lukan is a product leader living in Curitiba - Brazil, currently trying his own projects.',
+  },
   author: {
     name: 'Lukan Vanderlinde 🇧🇷',
     title: {
@@ -54,9 +55,10 @@ export const siteConfig = {
     },
   },
 } satisfies {
-  name: string
-  shortName: string
-  description: string
+  meta: {
+    name: string
+    description: string
+  }
   author: {
     name: string
     title: Record<Locale, string>

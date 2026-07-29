@@ -25,9 +25,9 @@ function isActive(href: string) {
   <div class="nav-shell flex min-h-16 items-center justify-between gap-3 border px-4 shadow-[var(--surface-shadow)]">
     <a href={getLocalePath(locale, '/')} class="flex min-w-0 items-center gap-2 font-semibold">
       <span class="grid h-8 w-8 shrink-0 place-items-center rounded-md bg-primary text-primary-foreground">
-        {siteConfig.name.slice(0, 1)}
+        {siteConfig.meta.name.slice(0, 1)}
       </span>
-      <span class="truncate">{siteConfig.name}</span>
+      <span class="truncate">{siteConfig.meta.name}</span>
     </a>
 
     <nav class="hidden items-center gap-1 md:flex" aria-label="Primary">
