@@ -12,10 +12,6 @@ const baseSchema = z.object({
   tags: z.array(z.string()).default([]),
   lang: z.enum(['en', 'pt']).optional(),
   toc: z.union([z.boolean(), z.enum(['center', 'side'])]).optional(),
-  math: z.boolean().optional(),
-  mermaid: z.boolean().optional(),
-  gallery: z.boolean().optional(),
-  lightbox: z.boolean().optional(),
 })
 
 const thoughts = defineCollection({

@@ -38,16 +38,12 @@ export const siteConfig = {
     },
   },
   gallery: {
-    enabled: true,
     defaultLayout: 'justified',
     gap: 10,
     targetRowHeight: 220,
     lastRowBehavior: 'center',
     columnWidth: 220,
     columns: 'auto',
-  },
-  lightbox: {
-    enabled: true,
   },
   thought: {
     relatedCount: 3,
@@ -84,6 +80,5 @@ export const siteConfig = {
     }
   }
   gallery: Record<string, any>
-  lightbox: Record<string, any>
   thought: Record<string, any>
 }
