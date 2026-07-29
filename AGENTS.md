@@ -43,7 +43,7 @@ pnpm preview
 - `src/content.config.ts`: Content Collections schema.
 - `src/content/thoughts/<locale>`: Blog content ("Thoughts" / "Pensamentos").
 - `src/content/projects/<locale>`: Project content.
-- `src/content/pages/<locale>`: Static page content (about, timeline, resume).
+- `src/content/pages/<locale>`: Static page content (about, timeline, stack).
 - `src/content/series/<locale>`: Series descriptions.
 - `src/pages`: Astro file-based routing, including default-language routes and `[locale]` localized routes.
 - `src/components/layout`: Page skeleton components.

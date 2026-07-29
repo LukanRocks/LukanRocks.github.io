@@ -1,7 +1,7 @@
 ---
-title: 'Resume'
-description: 'Professional resume of Jane Doe'
-layout: 'resume'
+title: 'About'
+description: 'About Jane Doe'
+layout: 'about'
 toc: false
 
 name: 'Jane Doe'

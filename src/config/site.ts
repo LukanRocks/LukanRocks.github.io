@@ -30,8 +30,8 @@ export const siteConfig = {
       enabled: true,
     },
   },
-  nav: ['thoughts', 'projects', 'stack'],
-  footerNav: ['archives', 'tags', 'series', 'resume'],
+  nav: ['about', 'thoughts', 'projects', 'stack'],
+  footerNav: ['archives', 'tags', 'series'],
   comments: {
     enabled: false,
     provider: 'giscus',

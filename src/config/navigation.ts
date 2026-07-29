@@ -26,9 +26,9 @@ const systemRoutes = {
     href: '/series/',
     icon: 'lucide:bookmark',
   },
-  resume: {
-    label: { en: 'Resume', pt: 'Currículo' },
-    href: '/resume/',
+  about: {
+    label: { en: 'About', pt: 'Sobre' },
+    href: '/about/',
     icon: 'lucide:file-text',
   },
   stack: {

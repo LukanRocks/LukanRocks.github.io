@@ -15,7 +15,7 @@ export const contentTypes = {
   thoughts: {
     collection: 'thoughts',
     path: '/thoughts/',
-    icon: 'lucide:file-text',
+    icon: 'lucide:pencil-sparkles',
     label: {
       en: 'Thoughts',
       pt: 'Pensamentos',
@@ -36,7 +36,7 @@ export const contentTypes = {
   projects: {
     collection: 'projects',
     path: '/projects/',
-    icon: 'lucide:layers',
+    icon: 'lucide:folder-heart',
     label: {
       en: 'Projects',
       pt: 'Projetos',

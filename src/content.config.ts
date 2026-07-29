@@ -45,7 +45,7 @@ const projects = defineCollection({
   }),
 })
 
-const resumeExperience = z.object({
+const aboutExperience = z.object({
   company: z.string(),
   title: z.string(),
   location: z.string().optional(),
@@ -56,7 +56,7 @@ const resumeExperience = z.object({
   stack: z.array(z.string()).optional(),
 })
 
-const resumeEducation = z.object({
+const aboutEducation = z.object({
   institution: z.string(),
   degree: z.string(),
   location: z.string().optional(),
@@ -65,19 +65,19 @@ const resumeEducation = z.object({
   description: z.string().optional(),
 })
 
-const resumeSkillGroup = z.object({
+const aboutSkillGroup = z.object({
   category: z.string(),
   items: z.array(z.string()),
 })
 
-const resumeCertification = z.object({
+const aboutCertification = z.object({
   name: z.string(),
   issuer: z.string(),
   date: z.string().optional(),
   url: z.string().optional(),
 })
 
-const resumeLanguage = z.object({
+const aboutLanguage = z.object({
   language: z.string(),
   level: z.string(),
 })
@@ -85,7 +85,7 @@ const resumeLanguage = z.object({
 const pages = defineCollection({
   loader: glob({ base: './src/content/pages', pattern: '**/*.{md,mdx}' }),
   schema: baseSchema.extend({
-    layout: z.enum(['page', 'timeline', 'resume']).default('page'),
+    layout: z.enum(['page', 'timeline', 'about']).default('page'),
     name: z.string().optional(),
     jobTitle: z.string().optional(),
     location: z.string().optional(),
@@ -95,11 +95,11 @@ const pages = defineCollection({
     linkedin: z.string().optional(),
     github: z.string().optional(),
     summary: z.string().optional(),
-    experience: z.array(resumeExperience).optional(),
-    education: z.array(resumeEducation).optional(),
-    skills: z.array(resumeSkillGroup).optional(),
-    certifications: z.array(resumeCertification).optional(),
-    languages: z.array(resumeLanguage).optional(),
+    experience: z.array(aboutExperience).optional(),
+    education: z.array(aboutEducation).optional(),
+    skills: z.array(aboutSkillGroup).optional(),
+    certifications: z.array(aboutCertification).optional(),
+    languages: z.array(aboutLanguage).optional(),
   }),
 })
 

@@ -1,7 +1,7 @@
 ---
-title: 'Currículo'
-description: 'Currículo profissional de Jane Doe'
-layout: 'resume'
+title: 'Sobre'
+description: 'Sobre Jane Doe'
+layout: 'about'
 toc: false
 
 name: 'Jane Doe'

@@ -8,7 +8,7 @@ Built with [Astro](https://astro.build) on the [Astro Narrow](https://github.com
 
 - **Framework**: Astro static site — content collections, remark/rehype Markdown transforms (alerts, tabs, math, Mermaid, galleries), Expressive Code blocks, Tailwind CSS 4.
 - **Package manager**: pnpm (version pinned via `packageManager` in `package.json`).
-- **Content**: Markdown in `src/content/` — `thoughts` (the blog, published at `/thoughts/`), `projects`, `pages` (about/timeline/resume), and `series`. Each English entry has a `pt/` sibling with the same filename for the language switcher to pair them.
+- **Content**: Markdown in `src/content/` — `thoughts` (the blog, published at `/thoughts/`), `projects`, `pages` (about/timeline/stack), and `series`. Each English entry has a `pt/` sibling with the same filename for the language switcher to pair them.
 
 ## Hosting & Domain
 
