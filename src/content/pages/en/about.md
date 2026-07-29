@@ -6,17 +6,17 @@ toc: false
 
 name: 'Lukan Vanderlinde'
 jobTitle: 'Director of Product Management'
-location: 'New York, United States'
+location: 'Brazil'
 linkedin: 'https://www.linkedin.com/in/lukanvanderlinde/'
 
-summary: 'Product leader with 8+ years across ecommerce, marketplaces, and B2B SaaS. Currently Director of Product Management at Intapp (TermSheet), after joining as its first product manager. Previously scaled marketplace and app-store products at VTEX, and led product at early-stage startups in transportation and real estate. A background in design and marketing shapes a user-centric, cross-functional approach.'
+summary: 'Product leader with 9+ years across B2B SaaS, ecommerce, real estate, and marketplace platforms. Most recently, I was Director of Product Management at Intapp, which acquired TermSheet, the startup where I was the first product manager and helped grow revenue 10x over nearly three years. Before that, I scaled marketplace and app-store products at VTEX and led product at early-stage startups in transportation and real estate. My background in design and marketing shapes a user-centric, cross-functional approach.'
 
 experience:
   - company: 'Intapp'
-    title: 'Director of Product Management — TermSheet'
-    location: 'New York, United States (Remote)'
+    title: 'Director of Product Management (TermSheet)'
+    location: 'United States (Remote)'
     start: 'Sep 2025'
-    end: 'Present'
+    end: 'Sep 2026'
 
   - company: 'TermSheet'
     title: 'First Product Manager'
@@ -25,14 +25,14 @@ experience:
     end: 'Sep 2025'
 
   - company: 'VTEX'
-    title: 'Senior Product Manager, Ecommerce — VTEX IO & App Store'
-    location: 'Remote'
+    title: 'Senior Product Manager, Ecommerce (VTEX IO & App Store)'
+    location: 'Brazil (Remote)'
     start: 'Mar 2022'
     end: 'Oct 2023'
 
   - company: 'VTEX'
-    title: 'Senior Product Manager, Ecommerce — Marketplace Integration'
-    location: 'Remote'
+    title: 'Senior Product Manager, Ecommerce (Marketplace Integration)'
+    location: 'Brazil (Remote)'
     start: 'May 2020'
     end: 'Mar 2022'
     description: 'Led strategy, roadmap, and execution for marketplace products with cross-functional engineering, design, marketing, and growth teams — grounding priorities in market research, competitor analysis, and customer feedback.'
@@ -43,7 +43,7 @@ experience:
       - 'Mentored trainees into successful product managers'
 
   - company: 'Ace Startups'
-    title: 'Product Owner — Transportation'
+    title: 'Product Owner (Transportation)'
     location: 'Greater São Paulo Area (On-site)'
     start: 'Aug 2019'
     end: 'May 2020'
@@ -54,7 +54,7 @@ experience:
       - 'Four successful test runs, scaling from one client to 80% capacity'
 
   - company: 'Brognoli Real Estate Business'
-    title: 'Product Owner — Real Estate'
+    title: 'Product Owner (Real Estate)'
     location: 'Greater Florianópolis (On-site)'
     start: 'Apr 2018'
     end: 'Aug 2019'
@@ -65,7 +65,7 @@ experience:
 
   - company: 'Grupo All'
     title: 'Marketing Analyst'
-    location: 'Greater Florianópolis'
+    location: 'Greater Florianópolis (On-site)'
     start: 'Jul 2017'
     end: 'Apr 2018'
     description: 'Worked in the in-house agency of an events group, supporting customers on digital channels, producing campaign materials with the design team, and reporting on campaign performance.'
@@ -77,6 +77,7 @@ experience:
 
   - company: 'Doutor-IE'
     title: 'Graphic Designer Intern'
+    location: 'Greater Florianópolis (On-site)'
     start: 'Mar 2017'
     end: 'Jul 2017'
     description: 'Produced graphic materials for the automotive encyclopedia and advertising, then moved into content production, directing and editing videos for its YouTube channel.'
