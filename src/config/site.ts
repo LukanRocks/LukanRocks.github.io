@@ -3,7 +3,7 @@ import type { Locale } from './i18n'
 export const siteConfig = {
   name: 'Lukan Vanderlinde',
   shortName: 'Lukan Vanderlinde',
-  description: 'A content-focused Astro theme inspired by Hugo Narrow.',
+  description: 'Lukan is a product leader living in Curitiba - Brazil, currently trying his own projects.',
   author: {
     name: 'Lukan Vanderlinde 🇧🇷',
     title: {
@@ -16,6 +16,7 @@ export const siteConfig = {
     },
     avatar: '/profile.png',
     social: [
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/lukanvanderlinde/', icon: 'simple-icons:linkedin' },
       { name: 'GitHub', url: 'https://github.com/LukanRocks', icon: 'simple-icons:github' },
       { name: 'Email', url: 'mailto:hello@lukan.rocks', icon: 'lucide:mail' },
     ],
@@ -29,7 +30,7 @@ export const siteConfig = {
       enabled: true,
     },
   },
-  nav: ['thoughts', 'projects', 'archives', 'tags', 'stack'],
+  nav: ['thoughts', 'projects', 'stack'],
   footerNav: ['archives', 'tags', 'series', 'resume'],
   comments: {
     enabled: false,
