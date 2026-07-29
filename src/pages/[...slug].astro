@@ -16,7 +16,7 @@ const isTimeline = entry.data.layout === 'timeline';
 const isAbout = entry.data.layout === 'about';
 ---
 
-<BaseLayout title={entry.data.title} description={entry.data.description} locale="en" headings={headings} toc={entry.data.toc ?? (headings.length > 0 ? 'side' : false)} comments={entry.data.comments}>
+<BaseLayout title={entry.data.title} description={entry.data.description} locale="en" headings={headings} toc={entry.data.toc ?? (headings.length > 0 ? 'side' : false)}>
   {isAbout
     ? <About data={entry.data} locale="en" />
     : <PageHeader title={entry.data.title} description={entry.data.description} date={entry.data.pubDate} locale="en" />}

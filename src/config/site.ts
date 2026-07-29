@@ -32,22 +32,6 @@ export const siteConfig = {
   },
   nav: ['about', 'thoughts', 'projects', 'stack'],
   footerNav: ['archives', 'tags', 'series'],
-  comments: {
-    enabled: false,
-    provider: 'giscus',
-    giscus: {
-      repo: '',
-      repoId: '',
-      category: '',
-      categoryId: '',
-      mapping: 'pathname',
-      strict: '0',
-      reactionsEnabled: '1',
-      emitMetadata: '0',
-      inputPosition: 'bottom',
-      theme: 'preferred_color_scheme',
-    },
-  },
   analytics: {
     enabled: false,
     provider: 'umami',
@@ -100,7 +84,6 @@ export const siteConfig = {
   }
   nav: Array<string | { label: Record<Locale, string>; href: string; icon: string }>
   footerNav: Array<string | { label: Record<Locale, string>; href: string; icon: string }>
-  comments: Record<string, any>
   analytics: Record<string, any>
   gallery: Record<string, any>
   lightbox: Record<string, any>

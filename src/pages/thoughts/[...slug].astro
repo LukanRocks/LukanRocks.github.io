@@ -31,7 +31,7 @@ const seriesGroups = (entry.data.series ?? [])
   .filter((group): group is { seriesEntry: any; thoughts: any[] } => Boolean(group));
 ---
 
-<BaseLayout title={entry.data.title} description={entry.data.description} locale="en" headings={headings} toc={entry.data.toc ?? 'center'} comments={entry.data.comments}>
+<BaseLayout title={entry.data.title} description={entry.data.description} locale="en" headings={headings} toc={entry.data.toc ?? 'center'}>
   <Breadcrumbs
     locale="en"
     items={[
