@@ -32,15 +32,6 @@ export const siteConfig = {
   },
   nav: ['about', 'thoughts', 'projects', 'stack'],
   footerNav: ['archives', 'tags', 'series'],
-  analytics: {
-    enabled: false,
-    provider: 'umami',
-    umami: {
-      src: '',
-      websiteId: '',
-      domains: '',
-    },
-  },
   gallery: {
     enabled: true,
     defaultLayout: 'justified',
@@ -84,7 +75,6 @@ export const siteConfig = {
   }
   nav: Array<string | { label: Record<Locale, string>; href: string; icon: string }>
   footerNav: Array<string | { label: Record<Locale, string>; href: string; icon: string }>
-  analytics: Record<string, any>
   gallery: Record<string, any>
   lightbox: Record<string, any>
   thought: Record<string, any>

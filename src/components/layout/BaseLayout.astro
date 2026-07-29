@@ -7,7 +7,6 @@ import Footer from './Footer.astro';
 import Dock from '../ui/Dock.astro';
 import SearchModal from '../features/SearchModal.astro';
 import Toc from '../features/Toc.astro';
-import Analytics from '../features/Analytics.astro';
 
 interface Heading {
   depth: number;
@@ -68,7 +67,6 @@ const themeInit = `
     {toc && headings.length > 0 && <Toc headings={headings} position={toc === true ? 'center' : toc} />}
     {siteConfig.ui.dock.enabled && <Dock locale={locale} />}
     <SearchModal locale={locale} />
-    <Analytics />
     <script>
       import '../../scripts/theme-controls.ts';
       import '../../scripts/reading-progress.ts';
