@@ -4,8 +4,19 @@ const codeThemes = {
   dark: 'github-dark',
 }
 
+const faviconBase = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/')
+const favicons = {
+  light: `${faviconBase}favicon-light.png`,
+  dark: `${faviconBase}favicon-dark.png`,
+}
+
 function currentColorMode() {
   return root.classList.contains('dark') ? 'dark' : 'light'
+}
+
+function syncFavicon() {
+  const icon = document.getElementById('favicon') as HTMLLinkElement | null
+  if (icon) icon.href = favicons[currentColorMode()]
 }
 
 function syncCodeTheme() {
@@ -47,6 +58,7 @@ document.addEventListener('click', (event) => {
     root.classList.toggle('dark')
     localStorage.setItem('color-mode', root.classList.contains('dark') ? 'dark' : 'light')
     syncCodeTheme()
+    syncFavicon()
     return
   }
 
@@ -55,3 +67,4 @@ document.addEventListener('click', (event) => {
 })
 
 syncCodeTheme()
+syncFavicon()

@@ -33,15 +33,17 @@ const {
 const pageTitle = title === siteConfig.meta.title ? title : `${title} | ${siteConfig.meta.title}`;
 const htmlLang = localeMeta[locale].htmlLang;
 const assetBase = import.meta.env.BASE_URL || '/';
-const faviconSvg = `${assetBase.replace(/\/?$/, '/')}favicon.svg`;
-const faviconIco = `${assetBase.replace(/\/?$/, '/')}favicon.ico`;
+const faviconBase = assetBase.replace(/\/?$/, '/');
+const faviconLight = `${faviconBase}favicon-light.png`;
+const faviconDark = `${faviconBase}favicon-dark.png`;
 const themeInit = `
 (() => {
   const root = document.documentElement;
   const mode = localStorage.getItem('color-mode');
-  if (mode === 'dark' || (!mode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    root.classList.add('dark');
-  }
+  const isDark = mode === 'dark' || (!mode && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  if (isDark) root.classList.add('dark');
+  const icon = document.getElementById('favicon');
+  if (icon) icon.setAttribute('href', isDark ? '${faviconDark}' : '${faviconLight}');
 })();
 `;
 ---
@@ -53,8 +55,7 @@ const themeInit = `
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href={faviconSvg} />
-    <link rel="icon" href={faviconIco} />
+    <link rel="icon" type="image/png" id="favicon" href={faviconLight} />
     <title>{pageTitle}</title>
     <script is:inline set:html={themeInit}></script>
   </head>
