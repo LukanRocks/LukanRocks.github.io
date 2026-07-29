@@ -2,8 +2,11 @@ import type { Locale } from './i18n'
 
 export const siteConfig = {
   meta: {
-    name: 'Lukan Vanderlinde',
-    description: 'Lukan is a product leader living in Curitiba - Brazil, currently trying his own projects.',
+    title: 'Lukan Vanderlinde',
+    description: {
+      en: 'Lukan is a product leader living in Curitiba - Brazil, currently trying his own projects.',
+      pt: 'Lukan é um líder de produto que vive em Curitiba - Brasil, atualmente tocando seus próprios projetos.',
+    },
   },
   author: {
     name: 'Lukan Vanderlinde 🇧🇷',
@@ -56,8 +59,8 @@ export const siteConfig = {
   },
 } satisfies {
   meta: {
-    name: string
-    description: string
+    title: string
+    description: Record<Locale, string>
   }
   author: {
     name: string

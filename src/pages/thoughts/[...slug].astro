@@ -35,7 +35,7 @@ const seriesGroups = (entry.data.series ?? [])
   <Breadcrumbs
     locale="en"
     items={[
-      { label: siteConfig.meta.name, href: getLocalePath('en', '/'), icon: 'lucide:home' },
+      { label: siteConfig.meta.title, href: getLocalePath('en', '/'), icon: 'lucide:home' },
       { label: contentTypes.thoughts.label.en, href: getLocalePath('en', contentTypes.thoughts.path), icon: contentTypes.thoughts.icon },
       { label: entry.data.title, icon: 'lucide:file-text' }
     ]}

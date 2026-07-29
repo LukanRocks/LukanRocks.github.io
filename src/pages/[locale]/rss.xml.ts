@@ -10,7 +10,7 @@ export async function GET({ params, site, url }: { params: { locale: Locale }; s
   const thoughts = await getLocalizedEntries('thoughts', params.locale)
   const origin = site?.origin || url.origin
 
-  return new Response(renderRss(thoughts, origin, `/${params.locale}/`), {
+  return new Response(renderRss(thoughts, origin, `/${params.locale}/`, params.locale), {
     headers: {
       'content-type': 'application/rss+xml; charset=utf-8',
     },
