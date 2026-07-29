@@ -1,0 +1,11 @@
+# Slack emoji library — one entry per emoji.
+# `id`        : unique, kebab-case.
+# `shortcode` : the text copied on click, e.g. ":party-parrot:"
+# `src`       : path under public/, e.g. /library/emojis/<file>.gif|png
+# Drop the real image into public/library/emojis/ and point `src` at it.
+
+- id: thanos-hangloose
+  name: Thanos Hangloose
+  shortcode: ':thanos-hangloose:'
+  src: /library/emojis/thanos-hangloose.svg
+  tags: [reaction, confirmation]

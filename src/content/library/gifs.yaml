@@ -1,0 +1,9 @@
+# GIF library — one entry per GIF.
+# `id`  : unique, kebab-case (also used as the fallback slug).
+# `src` : path under public/, e.g. /library/gifs/<file>.gif
+# Drop the real .gif into public/library/gifs/ and point `src` at it.
+- id: send-it
+  name: Send it!
+  src: /library/gifs/send-it.gif
+  tags: [reaction]
+  source: https://giphy.com/gifs/hamlet-send-it-ship-orVWNtMXSr9eDEUwhH
