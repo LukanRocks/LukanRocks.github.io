@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import type { CollectionEntry } from 'astro:content';
-import type { Locale } from '../../config/i18n';
+import { getLocalePath, type Locale } from '../../config/i18n';
 import type { ContentTypeId } from '../../config/content';
 import { siteConfig } from '../../config/site';
 import { useTranslations } from '../../i18n/utils';
@@ -43,7 +43,16 @@ const avatarSrc = assetPath(author.avatar);
       />
 
       <div class="min-w-0 flex-1">
-        <h1 class="text-3xl font-bold tracking-tight">{greeting}</h1>
+        <div class="flex items-center justify-center gap-3 md:justify-between">
+          <h1 class="text-3xl font-bold tracking-tight">{greeting}</h1>
+          <a
+            href={getLocalePath(locale, '/about/')}
+            class="group inline-flex shrink-0 items-center gap-1.5 rounded-[var(--radius-control)] px-3 py-2 text-sm font-medium text-muted-foreground/70! transition-colors duration-200 hover:text-primary!"
+          >
+            <span>{t('home.aboutMe')}</span>
+            <Icon name="lucide:arrow-right" class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+          </a>
+        </div>
         <p class="mt-1.5 text-lg text-muted-foreground">{author.title[locale]}</p>
         <p class="mt-3 leading-relaxed text-foreground">{author.description[locale]}</p>
 
