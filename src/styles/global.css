@@ -404,6 +404,24 @@ a {
   background: color-mix(in oklch, var(--color-muted), transparent 55%);
 }
 
+/* App-icon column in the Stack tables. Scoped with :has() so it only touches
+   tables that actually have an icon in the first column — never other tables. */
+.prose table:has(td:first-child img) :is(th, td):first-child {
+  width: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.prose table:has(td:first-child img) td:first-child img {
+  width: 2rem;
+  height: 2rem;
+  max-width: none;
+  margin: 0 auto;
+  border-radius: 5px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
 .prose details {
   margin-block: 1.5rem;
   overflow: hidden;
