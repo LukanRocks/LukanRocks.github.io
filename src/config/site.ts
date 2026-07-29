@@ -51,7 +51,10 @@ export const siteConfig = {
       enabled: true,
       name: 'CC BY-NC-SA 4.0',
       url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
-      description: 'This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.',
+      description: {
+        en: 'This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.',
+        pt: 'Este trabalho está licenciado sob uma licença Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional.',
+      },
     },
   },
 } satisfies {

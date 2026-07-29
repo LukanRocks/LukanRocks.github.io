@@ -22,7 +22,7 @@ const t = useTranslations(locale);
     <p>
       <a href={license.url} class="text-primary hover:underline">{license.name}</a>
       {' '}
-      {locale === 'pt' ? 'Este trabalho está licenciado sob uma licença Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional.' : license.description}
+      {license.description[locale]}
     </p>
   </section>
 )}
