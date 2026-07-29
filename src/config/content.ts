@@ -12,27 +12,6 @@ export type HomeSectionConfig = {
 }
 
 export const contentTypes = {
-  thoughts: {
-    collection: 'thoughts',
-    path: '/thoughts/',
-    icon: 'lucide:pencil-sparkles',
-    label: {
-      en: 'Thoughts',
-      pt: 'Pensamentos',
-    },
-    showMeta: true,
-    cardStyle: 'article',
-    listLayout: 'stack',
-    gridColumns: 1,
-    home: {
-      enabled: true,
-      limit: 5,
-      title: {
-        en: 'Thoughts',
-        pt: 'Pensamentos',
-      },
-    },
-  },
   projects: {
     collection: 'projects',
     path: '/projects/',
@@ -52,6 +31,27 @@ export const contentTypes = {
       title: {
         en: 'Projects',
         pt: 'Projetos',
+      },
+    },
+  },
+  thoughts: {
+    collection: 'thoughts',
+    path: '/thoughts/',
+    icon: 'lucide:pencil-sparkles',
+    label: {
+      en: 'Thoughts',
+      pt: 'Pensamentos',
+    },
+    showMeta: true,
+    cardStyle: 'article',
+    listLayout: 'stack',
+    gridColumns: 1,
+    home: {
+      enabled: true,
+      limit: 5,
+      title: {
+        en: 'Thoughts',
+        pt: 'Pensamentos',
       },
     },
   },

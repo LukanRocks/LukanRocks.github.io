@@ -28,7 +28,7 @@ export const siteConfig = {
     contentWidth: '56rem',
     navbar: {
       sticky: true,
-      items: ['about', 'thoughts', 'projects', 'stack'],
+      items: ['about', 'projects', 'thoughts', 'stack'],
     },
     footer: {
       items: ['archives', 'tags', 'series'],
