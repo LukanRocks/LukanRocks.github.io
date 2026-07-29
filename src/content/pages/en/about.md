@@ -1,72 +1,87 @@
 ---
 title: 'About'
-description: 'About Jane Doe'
+description: 'Product leader across ecommerce, marketplaces, and B2B SaaS'
 layout: 'about'
 toc: false
 
-name: 'Jane Doe'
-jobTitle: 'Senior Software Engineer'
-location: 'Berlin, Germany'
-email: 'jane@example.com'
-phone: '+49 30 1234 5678'
-website: 'https://janedoe.dev'
-linkedin: 'https://linkedin.com/in/janedoe'
-github: 'https://github.com/janedoe'
+name: 'Lukan Vanderlinde'
+jobTitle: 'Director of Product Management'
+location: 'New York, United States'
+linkedin: 'https://www.linkedin.com/in/lukanvanderlinde/'
 
-summary: 'Software engineer with 9 years of experience building scalable backend systems and developer tools. Passionate about open source, clean APIs, and developer experience.'
+summary: 'Product leader with 8+ years across ecommerce, marketplaces, and B2B SaaS. Currently Director of Product Management at Intapp (TermSheet), after joining as its first product manager. Previously scaled marketplace and app-store products at VTEX, and led product at early-stage startups in transportation and real estate. A background in design and marketing shapes a user-centric, cross-functional approach.'
 
 experience:
-  - company: 'Meridian Technologies'
-    title: 'Senior Software Engineer'
-    location: 'Berlin, Germany (Remote)'
-    start: 'Mar 2021'
+  - company: 'Intapp'
+    title: 'Director of Product Management — TermSheet'
+    location: 'New York, United States (Remote)'
+    start: 'Sep 2025'
     end: 'Present'
+
+  - company: 'TermSheet'
+    title: 'First Product Manager'
+    location: 'United States (Remote)'
+    start: 'Oct 2023'
+    end: 'Sep 2025'
+
+  - company: 'VTEX'
+    title: 'Senior Product Manager, Ecommerce — VTEX IO & App Store'
+    location: 'Remote'
+    start: 'Mar 2022'
+    end: 'Oct 2023'
+
+  - company: 'VTEX'
+    title: 'Senior Product Manager, Ecommerce — Marketplace Integration'
+    location: 'Remote'
+    start: 'May 2020'
+    end: 'Mar 2022'
+    description: 'Led strategy, roadmap, and execution for marketplace products with cross-functional engineering, design, marketing, and growth teams — grounding priorities in market research, competitor analysis, and customer feedback.'
     highlights:
-      - 'Redesigned core data pipeline processing 50M events/day, reducing p99 latency from 4s to 280ms'
-      - 'Led migration from monolith to event-driven microservices across 6 teams'
-      - 'Mentored 3 junior engineers through structured 1:1s and design review sessions'
-    stack: ['Go', 'Kafka', 'Kubernetes', 'PostgreSQL', 'Terraform', 'AWS']
+      - 'Reduced marketplace integration errors from 15% to under 1%'
+      - 'Cut merchant onboarding time from 4 weeks to 1'
+      - 'Quadrupled revenue tied to the Mercado Livre integration'
+      - 'Mentored trainees into successful product managers'
 
-  - company: 'Stackfield GmbH'
-    title: 'Backend Engineer'
-    location: 'Munich, Germany'
-    start: 'Jul 2018'
-    end: 'Feb 2021'
+  - company: 'Ace Startups'
+    title: 'Product Owner — Transportation'
+    location: 'Greater São Paulo Area (On-site)'
+    start: 'Aug 2019'
+    end: 'May 2020'
+    description: 'Led a squad inside the Ace Cortex Build and Launch corporate-innovation program, exploring new channels and businesses. Ran field research across six states and built a proof of concept to bring travelers back to intercity coach travel.'
     highlights:
-      - 'Built real-time collaboration engine powering 200k daily active users'
-      - 'Reduced infrastructure costs by 35% through query optimisation and caching strategy'
-    stack: ['Go', 'Redis', 'WebSockets', 'PostgreSQL', 'Docker']
+      - 'Shipped a technology MVP linking faster checkout to higher ticket sales'
+      - 'Introduced onboard self-service for food and drinks'
+      - 'Four successful test runs, scaling from one client to 80% capacity'
 
-education:
-  - institution: 'Technische Universität Berlin'
-    degree: 'M.Sc. Computer Science'
-    location: 'Berlin, Germany'
-    start: '2013'
-    end: '2015'
-    description: 'Thesis: Adaptive load balancing in distributed key-value stores'
+  - company: 'Brognoli Real Estate Business'
+    title: 'Product Owner — Real Estate'
+    location: 'Greater Florianópolis (On-site)'
+    start: 'Apr 2018'
+    end: 'Aug 2019'
+    description: 'Led the innovation team at a traditional real estate company, driving its transformation into a digital product organization. Partnered with executives, engineering, and design to define product vision, strategy, and goals around a user-centric approach validated through surveys and usability testing.'
+    highlights:
+      - 'Launched a SaaS platform that reinvented the rental experience for agencies'
+      - 'Acquired 16 clients in year one, among the largest real estate companies in Brazil'
 
-  - institution: 'Universität Stuttgart'
-    degree: 'B.Sc. Computer Science'
-    location: 'Stuttgart, Germany'
-    start: '2010'
-    end: '2013'
+  - company: 'Grupo All'
+    title: 'Marketing Analyst'
+    location: 'Greater Florianópolis'
+    start: 'Jul 2017'
+    end: 'Apr 2018'
+    description: 'Worked in the in-house agency of an events group, supporting customers on digital channels, producing campaign materials with the design team, and reporting on campaign performance.'
+    highlights:
+      - 'Built an automated dashboard covering the full marketing and sales funnel by event and channel'
+      - 'Automated 92% of Facebook Messenger responses, turning it into a lead-generation channel'
+      - 'Lifted email performance on RD Station from 10% to 30% opens and 0.8% to 20% clicks'
+    stack: ['RD Station', 'Photoshop', 'Illustrator', 'After Effects', 'Premiere']
 
-skills:
-  - category: 'Languages'
-    items: ['Go', 'TypeScript', 'Python', 'SQL']
-  - category: 'Infrastructure'
-    items: ['Kubernetes', 'Docker', 'AWS', 'Terraform', 'PostgreSQL', 'Redis', 'Kafka']
-  - category: 'Practices'
-    items: ['System Design', 'API Design', 'Code Review', 'Technical Writing']
-
-certifications:
-  - name: 'AWS Solutions Architect – Professional'
-    issuer: 'Amazon Web Services'
-    date: 'Nov 2022'
-
-languages:
-  - language: 'English'
-    level: 'Native'
-  - language: 'German'
-    level: 'Professional (C1)'
+  - company: 'Doutor-IE'
+    title: 'Graphic Designer Intern'
+    start: 'Mar 2017'
+    end: 'Jul 2017'
+    description: 'Produced graphic materials for the automotive encyclopedia and advertising, then moved into content production, directing and editing videos for its YouTube channel.'
+    highlights:
+      - 'Directed and edited two videos for one of the largest channels in the segment'
+      - 'Introduced video conventions — lower-thirds, intro, and outro — still in use'
+    stack: ['CorelDraw', 'After Effects', 'Premiere']
 ---
