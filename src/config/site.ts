@@ -7,8 +7,8 @@ export const siteConfig = {
   author: {
     name: 'Lukan Vanderlinde 🇧🇷',
     title: {
-      en: 'Currently building my own things · VTEX (IPO) · TermSheet (acquired)',
-      pt: 'Atualmente fazendo meus projetos · VTEX (IPO) · TermSheet (acquired)',
+      en: 'Currently building my own things · TermSheet (acquired) · VTEX (IPO)',
+      pt: 'Atualmente fazendo meus projetos · TermSheet (acquired) · VTEX (IPO)',
     },
     description: {
       en: "I've spent most of my career in product, leading teams, shaping roadmaps, and learning the hard way what makes software actually useful.",
