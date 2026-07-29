@@ -26,6 +26,11 @@ const systemRoutes = {
     href: '/series/',
     icon: 'lucide:bookmark',
   },
+  library: {
+    label: { en: 'Library', pt: 'Biblioteca' },
+    href: '/library/',
+    icon: 'lucide:library',
+  },
   about: {
     label: { en: 'About', pt: 'Sobre' },
     href: '/about/',

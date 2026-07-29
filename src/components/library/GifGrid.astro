@@ -1,0 +1,52 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '../../config/i18n';
+import { useTranslations } from '../../i18n/utils';
+
+interface Props {
+  items: CollectionEntry<'libraryGifs'>[];
+  locale: Locale;
+}
+
+const { items, locale } = Astro.props;
+const t = useTranslations(locale);
+
+// Absolute URLs are what you actually want to paste into Slack/chat.
+const toAbsolute = (src: string) => (Astro.site ? new URL(src, Astro.site).href : src);
+---
+
+{items.length === 0 ? (
+  <p class="text-muted-foreground">{t('library.empty')}</p>
+) : (
+  <ul class="columns-2 gap-4 sm:columns-3 [&>li]:mb-4 [&>li]:break-inside-avoid">
+    {items.map((item) => (
+      <li class="group relative">
+        <button
+          type="button"
+          data-copy={toAbsolute(item.data.src)}
+          data-toast={t('library.linkCopied')}
+          title={t('library.copyHint')}
+          aria-label={`${item.data.name} — ${t('library.copyHint')}`}
+          class="block w-full cursor-copy overflow-hidden rounded-[var(--radius-panel)] border border-border bg-muted transition hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+        >
+          <img src={item.data.src} alt={item.data.name} loading="lazy" decoding="async" class="w-full" />
+        </button>
+        <div class="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 rounded-b-[var(--radius-panel)] bg-gradient-to-t from-black/70 to-transparent px-3 pb-2 pt-6 text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100">
+          <span class="truncate">{item.data.name}</span>
+        </div>
+        {item.data.source && (
+          <a
+            href={item.data.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={item.data.source}
+            aria-label={`Source: ${item.data.name}`}
+            class="absolute right-2 top-2 grid h-7 w-7 place-items-center rounded-full bg-black/50 text-white opacity-0 backdrop-blur transition hover:bg-black/70 group-hover:opacity-100"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+        )}
+      </li>
+    ))}
+  </ul>
+)}

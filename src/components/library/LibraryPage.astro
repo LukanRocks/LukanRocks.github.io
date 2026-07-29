@@ -1,0 +1,76 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layout/BaseLayout.astro';
+import PageHeader from '../content/PageHeader.astro';
+import GifGrid from './GifGrid.astro';
+import EmojiGrid from './EmojiGrid.astro';
+import { getLocalePath, type Locale } from '../../config/i18n';
+import { useTranslations } from '../../i18n/utils';
+
+type Section = 'all' | 'gifs' | 'emojis';
+
+interface Props {
+  locale: Locale;
+  section?: Section;
+}
+
+const { locale, section = 'all' } = Astro.props;
+const t = useTranslations(locale);
+
+// Library data is language-neutral: same items in every locale, localized chrome.
+const gifs = await getCollection('libraryGifs');
+const emojis = await getCollection('libraryEmojis');
+
+const tabs: { id: Section; label: string; href: string }[] = [
+  { id: 'all', label: t('library.all'), href: getLocalePath(locale, '/library/') },
+  { id: 'gifs', label: t('library.gifs'), href: getLocalePath(locale, '/library/gifs/') },
+  { id: 'emojis', label: t('library.emojis'), href: getLocalePath(locale, '/library/emojis/') },
+];
+
+const showGifs = section === 'all' || section === 'gifs';
+const showEmojis = section === 'all' || section === 'emojis';
+---
+
+<BaseLayout title={t('library.title')} description={t('library.description')} locale={locale}>
+  <PageHeader title={t('library.title')} description={t('library.description')} locale={locale} />
+
+  <nav aria-label={t('library.title')} class="mb-10 flex flex-wrap gap-1.5">
+    {tabs.map((tab) => {
+      const isActive = tab.id === section;
+      return (
+        <a
+          href={tab.href}
+          aria-current={isActive ? 'page' : undefined}
+          class:list={[
+            'rounded-[var(--radius-control)] border px-3 py-1.5 text-sm font-medium transition-colors',
+            isActive
+              ? 'border-primary/40 bg-accent text-primary'
+              : 'border-border text-muted-foreground hover:bg-accent hover:text-foreground',
+          ]}
+        >
+          {tab.label}
+        </a>
+      );
+    })}
+  </nav>
+
+  <div class="space-y-12">
+    {showGifs && (
+      <section aria-labelledby="library-gifs">
+        {section === 'all' && (
+          <h2 id="library-gifs" class="mb-4 text-lg font-semibold tracking-tight">{t('library.gifs')}</h2>
+        )}
+        <GifGrid items={gifs} locale={locale} />
+      </section>
+    )}
+
+    {showEmojis && (
+      <section aria-labelledby="library-emojis">
+        {section === 'all' && (
+          <h2 id="library-emojis" class="mb-4 text-lg font-semibold tracking-tight">{t('library.emojis')}</h2>
+        )}
+        <EmojiGrid items={emojis} locale={locale} />
+      </section>
+    )}
+  </div>
+</BaseLayout>

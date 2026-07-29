@@ -1,0 +1,12 @@
+---
+import LibraryPage from '../../../components/library/LibraryPage.astro';
+import { locales, type Locale } from '../../../config/i18n';
+
+export function getStaticPaths() {
+  return locales.filter((locale) => locale !== 'en').map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+---
+
+<LibraryPage locale={locale} section="all" />

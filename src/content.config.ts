@@ -1,6 +1,6 @@
 import { defineCollection } from 'astro:content'
 import { z } from 'astro/zod'
-import { glob } from 'astro/loaders'
+import { glob, file } from 'astro/loaders'
 
 const baseSchema = z.object({
   title: z.string(),
@@ -103,9 +103,35 @@ const series = defineCollection({
   schema: baseSchema,
 })
 
+// Media library: language-neutral data, one YAML file per section.
+// Each item needs a unique `id`; assets live in `public/library/**`.
+const libraryGifs = defineCollection({
+  loader: file('./src/content/library/gifs.yaml'),
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+    src: z.string(),
+    tags: z.array(z.string()).default([]),
+    source: z.string().url().optional(),
+  }),
+})
+
+const libraryEmojis = defineCollection({
+  loader: file('./src/content/library/emojis.yaml'),
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+    shortcode: z.string(),
+    src: z.string(),
+    tags: z.array(z.string()).default([]),
+  }),
+})
+
 export const collections = {
   thoughts,
   projects,
   pages,
   series,
+  libraryGifs,
+  libraryEmojis,
 }
