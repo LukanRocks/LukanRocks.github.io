@@ -40,6 +40,28 @@ killall Dock
 
 </details>
 
+<details>
+<summary>Mover qualquer janela segurando Ctrl+Cmd e arrastando</summary>
+
+Por padrão só dá pra mover uma janela arrastando a barra de título dela. Existe um ajuste global escondido que permite arrastar de qualquer ponto da janela, barra de título, conteúdo, tanto faz, desde que você segure Ctrl+Cmd:
+
+> [!WARNING]
+> Não saia rodando comandos de terminal de pessoas aleatórias na internet. Estes são seguros, mas pesquise também antes de rodar qualquer coisa na sua máquina.
+
+```sh
+defaults write -g NSWindowShouldDragOnGesture -bool true
+```
+
+Não precisa reiniciar nada, o efeito é imediato em todos os apps.
+
+E, caso queira voltar ao normal, é só rodar:
+
+```sh
+defaults delete -g NSWindowShouldDragOnGesture
+```
+
+</details>
+
 # Aplicativos
 
 ::::tabs
@@ -52,9 +74,9 @@ Estes são os básicos que eu queria que fossem recursos padrão do macOS.
 | ![](/img/stack/homebrew.svg)         | [Homebrew](https://brew.sh/)                                     | Gerenciador de pacotes que funciona muito bem no macOS | Ativo    |                                                            |
 | ![](/img/stack/alfred.png)           | [Alfred 5](https://www.alfredapp.com/)                           | Substituto do Spotlight com workflows personalizados   | Ativo    |                                                            |
 | ![](/img/stack/markdown-preview.png) | [Markdown Preview](https://github.com/pluk-inc/markdown-preview) | Pré-visualização de markdown no Quick Look             | Ativo    | [Homebrew](https://formulae.brew.sh/cask/markdown-preview) |
-| ![](/img/stack/rectangle-pro.png)    | [Rectangle Pro](https://rectangleapp.com/pro)                    | Encaixe e organização de janelas via teclado           | Ativo    | [Homebrew](https://formulae.brew.sh/cask/rectangle-pro)    |
+| ![](/img/stack/rectangle-pro.png)    | [Rectangle Pro](https://rectangleapp.com/pro)                    | Encaixe e organização de janelas via teclado           | Inativo  | [Homebrew](https://formulae.brew.sh/cask/rectangle-pro)    |
 | ![](/img/stack/istherenet.png)       | [IsThereNet](https://github.com/FuzzyIdeas/IsThereNet)           | Uma faixa de luz que avisa quando o Wi-Fi cai          | Ativo    | [Homebrew](https://formulae.brew.sh/cask/istherenet)       |
-| ![](/img/stack/supercmd.png)         | [SuperCmd](https://supercmd.sh/)                                 | Alternativa ao Alfred e ao Rectangle, quem sabe?       | Testando | [Homebrew]()                                               |
+| ![](/img/stack/aerospace.png)        | [AeroSpace](https://github.com/nikitabobko/AeroSpace)            | Gerenciador de janelas em blocos, estilo i3            | Ativo    |                                                             |
 
 :::
 

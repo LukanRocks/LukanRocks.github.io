@@ -40,6 +40,28 @@ killall Dock
 
 </details>
 
+<details>
+<summary>Move any window by holding Ctrl+Cmd and dragging</summary>
+
+By default you can only move a window by dragging its title bar. There's a hidden global default that lets you drag from anywhere on the window instead, title bar, content, wherever, as long as you hold Ctrl+Cmd:
+
+> [!WARNING]
+> Don't go around running commands on your terminal from random people on the internet. These are safe but do your research too before running them on your machine.
+
+```sh
+defaults write -g NSWindowShouldDragOnGesture -bool true
+```
+
+No need to restart anything, it takes effect right away for every app.
+
+And in the case you want to revert back to normal, you can run:
+
+```sh
+defaults delete -g NSWindowShouldDragOnGesture
+```
+
+</details>
+
 # Apps
 
 ::::tabs
@@ -52,9 +74,9 @@ These are the basic ones I wish were default features on macOS.
 |     ![](/img/stack/homebrew.svg)     | [Homebrew](https://brew.sh/)                                     | Package manager that works great on macOS   | Active     |                                                            |
 |      ![](/img/stack/alfred.png)      | [Alfred 5](https://www.alfredapp.com/)                           | Spotlight replacement with custom workflows | Active     |                                                            |
 | ![](/img/stack/markdown-preview.png) | [Markdown Preview](https://github.com/pluk-inc/markdown-preview) | Quick Look preview for markdown files       | Active     | [Homebrew](https://formulae.brew.sh/cask/markdown-preview) |
-|  ![](/img/stack/rectangle-pro.png)   | [Rectangle Pro](https://rectangleapp.com/pro)                    | Keyboard-driven window snapping and tiling  | Active     | [Homebrew](https://formulae.brew.sh/cask/rectangle-pro)    |
+|  ![](/img/stack/rectangle-pro.png)   | [Rectangle Pro](https://rectangleapp.com/pro)                    | Keyboard-driven window snapping and tiling  | Inactive   | [Homebrew](https://formulae.brew.sh/cask/rectangle-pro)    |
 |    ![](/img/stack/istherenet.png)    | [IsThereNet](https://github.com/FuzzyIdeas/IsThereNet)           | A light strip that flags when Wi-Fi drops   | Active     | [Homebrew](https://formulae.brew.sh/cask/istherenet)       |
-|     ![](/img/stack/supercmd.png)     | [SuperCmd](https://supercmd.sh/)                                 | Alfred and Rectangle alternative, maybe?    | Trying Out | [Homebrew]()                                               |
+|    ![](/img/stack/aerospace.png)     | [AeroSpace](https://github.com/nikitabobko/AeroSpace)            | i3-like tiling window manager               | Active     |                                                             |
 
 :::
 
