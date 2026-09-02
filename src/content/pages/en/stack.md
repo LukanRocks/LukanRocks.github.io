@@ -62,6 +62,41 @@ defaults delete -g NSWindowShouldDragOnGesture
 
 </details>
 
+<details>
+<summary>Mission Control doesn't play nice with AeroSpace</summary>
+
+If you use [AeroSpace](https://github.com/nikitabobko/AeroSpace), Mission Control can end up rendering windows way smaller than it should, even when there's plenty of room, because AeroSpace tends to stack a lot of windows down in the bottom right corner. Turning on "Group windows by application" fixes it:
+
+> [!WARNING]
+> Don't go around running commands on your terminal from random people on the internet. These are safe but do your research too before running them on your machine.
+
+```sh
+defaults write com.apple.dock expose-group-apps -bool true && killall Dock
+```
+
+Same toggle lives in System Settings → Desktop & Dock → Group windows by application, if you'd rather flip it there.
+
+</details>
+
+<details>
+<summary>Turn off "Displays have separate Spaces"</summary>
+
+macOS multi-monitor setups get noticeably more stable once you disable "Displays have separate Spaces" (on by default). With it on, moving a window between monitors actually moves it between Spaces, which tools like [AeroSpace](https://github.com/nikitabobko/AeroSpace) that rely on the public window APIs don't handle well, it's a known source of random focus and performance glitches. The tradeoff is windows can't span monitors and native fullscreen leaves the second display as a black screen, but for me it's worth it:
+
+> [!WARNING]
+> Don't go around running commands on your terminal from random people on the internet. These are safe but do your research too before running them on your machine.
+
+```sh
+defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
+```
+
+Same toggle lives in System Settings → Desktop & Dock → Displays have separate Spaces, if you'd rather flip it there.
+
+> [!NOTE]
+> You need to log out for this one to fully take effect, restarting SystemUIServer isn't enough.
+
+</details>
+
 # Apps
 
 ::::tabs
@@ -77,6 +112,7 @@ These are the basic ones I wish were default features on macOS.
 |  ![](/img/stack/rectangle-pro.png)   | [Rectangle Pro](https://rectangleapp.com/pro)                    | Keyboard-driven window snapping and tiling  | Inactive   | [Homebrew](https://formulae.brew.sh/cask/rectangle-pro)    |
 |    ![](/img/stack/istherenet.png)    | [IsThereNet](https://github.com/FuzzyIdeas/IsThereNet)           | A light strip that flags when Wi-Fi drops   | Active     | [Homebrew](https://formulae.brew.sh/cask/istherenet)       |
 |    ![](/img/stack/aerospace.png)     | [AeroSpace](https://github.com/nikitabobko/AeroSpace)            | i3-like tiling window manager               | Active     |                                                             |
+|                                      | [JankyBorders](https://github.com/FelixKratz/JankyBorders)       | Colored border around the focused window    | Active     |                                                             |
 
 :::
 

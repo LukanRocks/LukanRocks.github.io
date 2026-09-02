@@ -62,6 +62,41 @@ defaults delete -g NSWindowShouldDragOnGesture
 
 </details>
 
+<details>
+<summary>O Mission Control não se dá bem com o AeroSpace</summary>
+
+Se você usa o [AeroSpace](https://github.com/nikitabobko/AeroSpace), o Mission Control pode acabar mostrando as janelas bem menores do que deveria, mesmo tendo espaço de sobra, porque o AeroSpace tende a empilhar várias janelas no canto inferior direito. Ativar "Agrupar janelas por aplicativo" resolve:
+
+> [!WARNING]
+> Não saia rodando comandos de terminal de pessoas aleatórias na internet. Estes são seguros, mas pesquise também antes de rodar qualquer coisa na sua máquina.
+
+```sh
+defaults write com.apple.dock expose-group-apps -bool true && killall Dock
+```
+
+O mesmo ajuste também fica em Ajustes do Sistema → Área de Trabalho e Dock → Agrupar janelas por aplicativo, se preferir mexer por lá.
+
+</details>
+
+<details>
+<summary>Desative "Cada tela tem seus próprios Espaços"</summary>
+
+Setups com múltiplos monitores no macOS ficam bem mais estáveis quando você desativa "Cada tela tem seus próprios Espaços" (vem ativado por padrão). Com essa opção ligada, mover uma janela entre monitores na verdade move ela entre Espaços diferentes, algo que ferramentas como o [AeroSpace](https://github.com/nikitabobko/AeroSpace), que dependem das APIs públicas de janelas, não lidam bem, é uma causa conhecida de bugs aleatórios de foco e desempenho. A contrapartida é que janelas não podem ocupar mais de um monitor e o fullscreen nativo deixa o segundo monitor com uma tela preta, mas pra mim vale a pena:
+
+> [!WARNING]
+> Não saia rodando comandos de terminal de pessoas aleatórias na internet. Estes são seguros, mas pesquise também antes de rodar qualquer coisa na sua máquina.
+
+```sh
+defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
+```
+
+O mesmo ajuste também fica em Ajustes do Sistema → Área de Trabalho e Dock → Cada tela tem seus próprios Espaços, se preferir mexer por lá.
+
+> [!NOTE]
+> É preciso fazer logout para esse ajuste valer de verdade, só reiniciar o SystemUIServer não é suficiente.
+
+</details>
+
 # Aplicativos
 
 ::::tabs
@@ -77,6 +112,7 @@ Estes são os básicos que eu queria que fossem recursos padrão do macOS.
 | ![](/img/stack/rectangle-pro.png)    | [Rectangle Pro](https://rectangleapp.com/pro)                    | Encaixe e organização de janelas via teclado           | Inativo  | [Homebrew](https://formulae.brew.sh/cask/rectangle-pro)    |
 | ![](/img/stack/istherenet.png)       | [IsThereNet](https://github.com/FuzzyIdeas/IsThereNet)           | Uma faixa de luz que avisa quando o Wi-Fi cai          | Ativo    | [Homebrew](https://formulae.brew.sh/cask/istherenet)       |
 | ![](/img/stack/aerospace.png)        | [AeroSpace](https://github.com/nikitabobko/AeroSpace)            | Gerenciador de janelas em blocos, estilo i3            | Ativo    |                                                             |
+|                                      | [JankyBorders](https://github.com/FelixKratz/JankyBorders)       | Borda colorida ao redor da janela em foco              | Ativo    |                                                             |
 
 :::
 
