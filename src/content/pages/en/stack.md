@@ -108,8 +108,8 @@ These are the basic ones I wish were default features on macOS.
 | :----------------------------------: | ---------------------------------------------------------------- | ------------------------------------------- | ---------- | ---------------------------------------------------------- |
 |     ![](/img/stack/homebrew.svg)     | [Homebrew](https://brew.sh/)                                     | Package manager that works great on macOS   | Active     |                                                            |
 |      ![](/img/stack/alfred.png)      | [Alfred 5](https://www.alfredapp.com/)                           | Spotlight replacement with custom workflows | Active     |                                                            |
+|     ![](/img/stack/tinycast.png)     | [Tinycast](https://github.com/abue-ammar/tinycast)               | Launcher with hotkeys and clipboard history | Trying Out | [Homebrew](https://formulae.brew.sh/cask/tinycast)         |
 | ![](/img/stack/markdown-preview.png) | [Markdown Preview](https://github.com/pluk-inc/markdown-preview) | Quick Look preview for markdown files       | Active     | [Homebrew](https://formulae.brew.sh/cask/markdown-preview) |
-|  ![](/img/stack/rectangle-pro.png)   | [Rectangle Pro](https://rectangleapp.com/pro)                    | Keyboard-driven window snapping and tiling  | Inactive   | [Homebrew](https://formulae.brew.sh/cask/rectangle-pro)    |
 |    ![](/img/stack/istherenet.png)    | [IsThereNet](https://github.com/FuzzyIdeas/IsThereNet)           | A light strip that flags when Wi-Fi drops   | Active     | [Homebrew](https://formulae.brew.sh/cask/istherenet)       |
 |    ![](/img/stack/aerospace.png)     | [AeroSpace](https://github.com/nikitabobko/AeroSpace)            | i3-like tiling window manager               | Active     |                                                             |
 |                                      | [JankyBorders](https://github.com/FelixKratz/JankyBorders)       | Colored border around the focused window    | Active     |                                                             |
@@ -159,14 +159,15 @@ These are the basic ones I wish were default features on macOS.
 
 :::tab{title="Utilities"}
 
-|                                     | Name                                                            | What it's for                               | Status     |
-| :---------------------------------: | --------------------------------------------------------------- | ------------------------------------------- | ---------- |
-|    ![](/img/stack/affinity.png)     | [Affinity](https://affinity.serif.com/)                         | Photo, Designer, Publisher, no subscription | Active     |
-|       ![](/img/stack/vlc.png)       | [VLC](https://www.videolan.org/vlc/)                            | Plays pretty much any video format          | Active     |
-|   ![](/img/stack/pearcleaner.png)   | [Pearcleaner](https://github.com/alienator88/Pearcleaner)       | Uninstaller that removes the leftovers      | Active     |
-|      ![](/img/stack/lunar.png)      | [Lunar](https://github.com/alin23/Lunar)                        | Syncs brightness across every display       | Trying Out |
-| ![](/img/stack/keepingyouawake.png) | [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake) | Keeps my Mac awake during builds and demos  | Trying Out |
-|    ![](/img/stack/localsend.png)    | [LocalSend](https://github.com/localsend/localsend)             | Open-source AirDrop, cross-platform         | Trying Out |
+|                                     | Name                                                            | What it's for                               | Status     | Download                                            |
+| :---------------------------------: | --------------------------------------------------------------- | ------------------------------------------- | ---------- | --------------------------------------------------- |
+|     ![](/img/stack/affinity.png)    | [Affinity](https://affinity.serif.com/)                         | Photo, Designer, Publisher, no subscription | Active     |                                                     |
+|       ![](/img/stack/vlc.png)       | [VLC](https://www.videolan.org/vlc/)                            | Plays pretty much any video format          | Active     |                                                     |
+|   ![](/img/stack/pearcleaner.png)   | [Pearcleaner](https://github.com/alienator88/Pearcleaner)       | Uninstaller that removes the leftovers      | Active     |                                                     |
+|      ![](/img/stack/lunar.png)      | [Lunar](https://github.com/alin23/Lunar)                        | Syncs brightness across every display       | Trying Out |                                                     |
+| ![](/img/stack/keepingyouawake.png) | [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake) | Keeps my Mac awake during builds and demos  | Trying Out |                                                     |
+|    ![](/img/stack/localsend.png)    | [LocalSend](https://github.com/localsend/localsend)             | Open-source AirDrop, cross-platform         | Trying Out |                                                     |
+|    ![](/img/stack/macpacker.png)    | [MacPacker](https://macpacker.app/en)                           | Archive manager for zip, rar, 7z and more   | Trying Out | [Homebrew](https://formulae.brew.sh/cask/macpacker) |
 
 :::
 

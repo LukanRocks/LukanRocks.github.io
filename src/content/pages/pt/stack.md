@@ -108,8 +108,8 @@ Estes são os básicos que eu queria que fossem recursos padrão do macOS.
 | :----------------------------------: | ---------------------------------------------------------------- | ------------------------------------------------------ | -------- | ---------------------------------------------------------- |
 | ![](/img/stack/homebrew.svg)         | [Homebrew](https://brew.sh/)                                     | Gerenciador de pacotes que funciona muito bem no macOS | Ativo    |                                                            |
 | ![](/img/stack/alfred.png)           | [Alfred 5](https://www.alfredapp.com/)                           | Substituto do Spotlight com workflows personalizados   | Ativo    |                                                            |
+| ![](/img/stack/tinycast.png)         | [Tinycast](https://github.com/abue-ammar/tinycast)               | Launcher nativo com atalhos e histórico do clipboard   | Testando | [Homebrew](https://formulae.brew.sh/cask/tinycast)         |
 | ![](/img/stack/markdown-preview.png) | [Markdown Preview](https://github.com/pluk-inc/markdown-preview) | Pré-visualização de markdown no Quick Look             | Ativo    | [Homebrew](https://formulae.brew.sh/cask/markdown-preview) |
-| ![](/img/stack/rectangle-pro.png)    | [Rectangle Pro](https://rectangleapp.com/pro)                    | Encaixe e organização de janelas via teclado           | Inativo  | [Homebrew](https://formulae.brew.sh/cask/rectangle-pro)    |
 | ![](/img/stack/istherenet.png)       | [IsThereNet](https://github.com/FuzzyIdeas/IsThereNet)           | Uma faixa de luz que avisa quando o Wi-Fi cai          | Ativo    | [Homebrew](https://formulae.brew.sh/cask/istherenet)       |
 | ![](/img/stack/aerospace.png)        | [AeroSpace](https://github.com/nikitabobko/AeroSpace)            | Gerenciador de janelas em blocos, estilo i3            | Ativo    |                                                             |
 |                                      | [JankyBorders](https://github.com/FelixKratz/JankyBorders)       | Borda colorida ao redor da janela em foco              | Ativo    |                                                             |
@@ -159,14 +159,15 @@ Estes são os básicos que eu queria que fossem recursos padrão do macOS.
 
 :::tab{title="Utilitários"}
 
-|                                     | Nome                                                            | Pra que serve                                   | Status   |
-| :---------------------------------: | --------------------------------------------------------------- | ----------------------------------------------- | -------- |
-| ![](/img/stack/affinity.png)        | [Affinity](https://affinity.serif.com/)                         | Photo, Designer, Publisher, sem assinatura      | Ativo    |
-| ![](/img/stack/vlc.png)             | [VLC](https://www.videolan.org/vlc/)                            | Reproduz praticamente qualquer formato de vídeo | Ativo    |
-| ![](/img/stack/pearcleaner.png)     | [Pearcleaner](https://github.com/alienator88/Pearcleaner)       | Desinstalador que remove o que sobra            | Ativo    |
-| ![](/img/stack/lunar.png)           | [Lunar](https://github.com/alin23/Lunar)                        | Sincroniza o brilho entre todos os monitores    | Testando |
-| ![](/img/stack/keepingyouawake.png) | [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake) | Evita que meu Mac durma durante builds e demos  | Testando |
-| ![](/img/stack/localsend.png)       | [LocalSend](https://github.com/localsend/localsend)             | AirDrop open source e multiplataforma           | Testando |
+|                                     | Nome                                                            | Pra que serve                                   | Status   | Download                                            |
+| :---------------------------------: | --------------------------------------------------------------- | ----------------------------------------------- | -------- | --------------------------------------------------- |
+| ![](/img/stack/affinity.png)        | [Affinity](https://affinity.serif.com/)                         | Photo, Designer, Publisher, sem assinatura      | Ativo    |                                                     |
+| ![](/img/stack/vlc.png)             | [VLC](https://www.videolan.org/vlc/)                            | Reproduz praticamente qualquer formato de vídeo | Ativo    |                                                     |
+| ![](/img/stack/pearcleaner.png)     | [Pearcleaner](https://github.com/alienator88/Pearcleaner)       | Desinstalador que remove o que sobra            | Ativo    |                                                     |
+| ![](/img/stack/lunar.png)           | [Lunar](https://github.com/alin23/Lunar)                        | Sincroniza o brilho entre todos os monitores    | Testando |                                                     |
+| ![](/img/stack/keepingyouawake.png) | [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake) | Evita que meu Mac durma durante builds e demos  | Testando |                                                     |
+| ![](/img/stack/localsend.png)       | [LocalSend](https://github.com/localsend/localsend)             | AirDrop open source e multiplataforma           | Testando |                                                     |
+| ![](/img/stack/macpacker.png)       | [MacPacker](https://macpacker.app/en)                           | Gerenciador de arquivos zip, rar, 7z e outros   | Testando | [Homebrew](https://formulae.brew.sh/cask/macpacker) |
 
 :::
 
